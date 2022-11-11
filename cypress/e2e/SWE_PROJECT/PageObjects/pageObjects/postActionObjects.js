@@ -1,7 +1,12 @@
+//1)Later: important : most of these ids is for the first post which is child(3)
+//so, later we have to edit it (when it becomes child (1)
+//NOTES:if ypu want to upvote any post rather than the first post , most of thses functions may not help
+
+//2))Later: important : the class names of any msg or any (Undo) in msg or (X) in msg , need to be updated later
 
 class postActionObjects {
     navigate() {
-        cy.visit('http://localhost:8085/')
+        cy.visit('http://localhost/main')
     } 
 
     
@@ -10,12 +15,9 @@ class postActionObjects {
             .should('equal',url);
     }
  
-    // postOptions(){
-    //     cy.get('')
-    //         .children()
-    //         .first()
-            
-    // }
+    postOptions(){
+       return cy.get('.sub-menu')        
+    }
     
     //################################################### save and unsave posts################################################# 
 
@@ -32,23 +34,25 @@ class postActionObjects {
     }
 
     saveMsgSyntax() {
-        return cy.get('')           
+        cy.get('._7JH6kQpO-bx66b9ajIZrz') 
+            .should('have.text','Post saved successfully');          
     }
 
     unsaveMsgSyntax() {
-        return cy.get('')           
+        cy.get('._7JH6kQpO-bx66b9ajIZrz') 
+            .should('have.text','Post unsaved successfully');          
     }
 
     saveUndoByMsg() {
         //"undo" button
-        cy.get('')
+        cy.get('._2iuoyPiKHN3kfOoeIQalDT _3zbhtNO0bdck0oYbYRhjMC HNozj_dKjQZ59ZsfEegz8')
             .click()
 
     }
 
     unsaveUndoByMsg() {
         //"undo" button
-        cy.get('')
+        cy.get('._2iuoyPiKHN3kfOoeIQalDT _3zbhtNO0bdck0oYbYRhjMC HNozj_dKjQZ59ZsfEegz8')
             .click()
 
     }
@@ -61,80 +65,33 @@ class postActionObjects {
             .click()
     }
 
-    unhidePost() {
+    //later:m.s of this function
+    unhidePostDisappearance() {
         //"unhide" button
-        cy.get('')
-            .click()
+        cy.get('.sub-menu')
+            .should('not.exist')
+            //.should('not.contain','Unhide').and('not.contain','unhide').and('not.contain','UnHide') 
     }
+
 
     hideMsgSyntax() {
-        return cy.get('')           
+        cy.get('_7JH6kQpO-bx66b9ajIZrz ')
+            .should('have.text','Post hidden successfully.')           
     }
 
-    unhideMsgSyntax() {
-        return cy.get('')           
+    //later:important: what if there are more than one post have the same title of hidden post?
+    disappHiddenfPost(postTitle) {
+        cy.contains(postTitle)
+            .should('not.exist')
     }
 
-    hideUndoByMsg() {
-        //"undo" button
-        cy.get('')
-            .click()
-
+    //  //###################################################Edit posts################################################# 
+    //later:m.s of this function
+    editPostDisappearance() {
+        //"edit" button
+        cy.get('.sub-menu')
+            .should('not.contain','Edit').and('not.contain','edit') 
     }
-
-    unhideUndoByMsg() {
-        //"undo" button
-        cy.get('')
-            .click()
-
-    }
-
-
-
-
-
-
-
-     //###################################################Edit posts################################################# 
-
-    editPost() {
-        //"eidt" button
-        cy.get('')
-            .click()
-    }
-
-    editCancel() {
-        //"cancel" button
-        cy.get('')
-            .click()
-    }
-    
-    editCancelbyX() {
-        //"X" button
-        cy.get('')
-            .click()
-    }
-
-    editSave() {
-        //"save" button
-        cy.get('')
-            .click()
-    }
-
-    editText(text) {
-        cy.get('')
-            .type(text);
-        return this
-    }
-
-    
-    editMsgSyntax() {
-        return cy.get('')           
-    }
-
-    //NOTE: there is no (undo) in edit msg
-
-
 
     // ################################################# vote posts ################################################# 
  
@@ -157,7 +114,7 @@ class postActionObjects {
     //?:-return?the concept?
     votesNum(){
         //get number ov votes
-        return cy.get(':nth-child(3) > .d-flex > .p-2') //.invoke('text')
+       return cy.get(':nth-child(3) > .d-flex > .p-2') .invoke('text')
     }
 
     //?should the number be '32' or integer(32)?
@@ -186,64 +143,34 @@ class postActionObjects {
 
     // ################################################# delete posts ################################################# 
  
-    deletePost() {
+    deleteDisappearance() {
+        //Disappearance of delete option in any posts rather than those of the users
         //"delete" button
-        cy.get('')
-            .click()
+        cy.get('.sub-menu')
+            .should('not.contain','Delete').and('not.contain','delete') 
     }
-
-    deleteCancel() {
-        //"cancel" button
-        cy.get('')
-            .click()
-    }
-
-    deleteCancelbyX() {
-        //"X" button
-        cy.get('')
-            .click()
-    }
-
-    deleteSave() {
-        //"Delete post" button
-        cy.get('')
-            .click()
-    }
-  
-    deleteMsgSyntax() {
-        return cy.get('')           
-    }
-
-    //NOTE: there is no (undo) in final delete msg
-
-
-
-
 
      //Later: ################################################# share posts ################################################# 
 
      //generl check , if all have the sme id:
     // checkMsgSyntax(msg) {       
-    //     cy.get('')
+    //     cy.get('_7JH6kQpO-bx66b9ajIZrz')
     //         .should('have.text',msg);
 
     // }
 
     // undoByMsg() {
     //     //"undo" button
-    //     cy.get('')
+    //     cy.get('._2iuoyPiKHN3kfOoeIQalDT _3zbhtNO0bdck0oYbYRhjMC HNozj_dKjQZ59ZsfEegz8')
     //         .click()
-
     // }
-
-    
+   
     //?later : check if the msg diappeared or not after click on (x)
     msgCancelbyX() {
         //"X" button which appeare when we pass over the msg
-        cy.get('')
+        cy.get('.CloseIcon')
             .click()
     }
-
 
    // ################################################# linking between posts and comments ################################################# 
     
@@ -255,13 +182,33 @@ class postActionObjects {
 
     //?Later: get the link of the post , then get the link of the comment page of this post
     checkCommmentPage() {
-        urlChecker('http://localhost:8085/comments')
+        this.urlChecker('http://localhost/r/sub-com/comments/1/Hello%20World/')
     }
 
+     // ################################################# linking between posts and user profile ################################################# 
+    
+    goUserProfile() {
+        cy.get('#go-to-user-page')
+            .click()
+    }
 
+    getFirstPostTitle() {
+       return cy.get(':nth-child(3) > .post-content > #post-router > .post-title > h3').invoke('text')//.as('posttext')
+    }
 
+    showSettingsSubmenu() {
+        cy.get('#show-settings-submenu')
+            .click()
+    }
 
-
+    //?Later: important: we have a serious problem in find saving in cypress!
+    //?at the full window , saved appeare without the need to click on (...) 
+    //?but in cypress window , it has to click on (...) !!
+    //?which is totally different id !! 
+    firstPostActionsList() {
+        cy.get(':nth-child(3) > .post-content > .post-services > .services > #submenu')
+            .click()
+    }
 
 }
-    export default postActionObjects
+export default postActionObjects
