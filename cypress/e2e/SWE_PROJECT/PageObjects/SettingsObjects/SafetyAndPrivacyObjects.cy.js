@@ -2,7 +2,7 @@ class SafetyAndPrivacyObjects{
 
     //TODO: CHECK ALL IDS OF THIS PAGE OBJECTS
     navigate() {
-        cy.visit('http://localhost/settings/privacy')
+        cy.visit(Cypress.env('CYPRESSBASEURL') +'/settings/privacy')
     }
     //----------------------------------------Safety Section----------------------------------------//
 

@@ -1,7 +1,7 @@
 
 class ForgetUserNameObjects {
     navigate() {
-        cy.visit('http://localhost/login')
+        cy.visit(Cypress.env('CYPRESSBASEURL') +'/login')
     } 
     
     //----------------------------------------Test #1----------------------------------------// 

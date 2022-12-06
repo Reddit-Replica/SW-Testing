@@ -1,7 +1,7 @@
 class signUpObjects{
     navigate() {
     //?which one?    
-        cy.visit('http://read-it.francecentral.cloudapp.azure.com/signup')
+        cy.visit(Cypress.env('CYPRESSBASEURL') +'/signup')
         //cy.visit('https://www.reddit.com/register/')
     }
 

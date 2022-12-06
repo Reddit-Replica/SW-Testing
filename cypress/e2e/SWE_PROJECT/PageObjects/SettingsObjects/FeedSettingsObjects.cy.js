@@ -1,7 +1,7 @@
 class FeedSettingsObjects{
 
     navigate() {
-        cy.visit('http://localhost/settings/feed')
+        cy.visit(Cypress.env('CYPRESSBASEURL') +'/settings/feed')
     }
     //----------------------------CONTENT PREFERENCES Section--------------------------------//
 

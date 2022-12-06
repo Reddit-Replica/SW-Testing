@@ -1,7 +1,7 @@
 
 class ResetPasswordObjects {
     navigate() {
-        cy.visit('http://localhost/reset-password/:id/:token')
+        cy.visit(Cypress.env('CYPRESSBASEURL') +'/reset-password/:id/:token')
     } 
     
     TitleChecker(){

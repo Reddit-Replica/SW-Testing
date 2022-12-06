@@ -1,7 +1,7 @@
 class EmailsObjects{
 
     navigate() {
-        cy.visit('http://localhost/settings/emails')
+        cy.visit(Cypress.env('CYPRESSBASEURL') + '/settings/emails')
     }
 
     //----------------------------------------Test #1----------------------------------------//     

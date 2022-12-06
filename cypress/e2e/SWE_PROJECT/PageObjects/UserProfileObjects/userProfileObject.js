@@ -1,7 +1,7 @@
 class userProfileObject{
     navigate() {
         //NOTE:edited later
-        cy.visit('http://localhost/user/asmaaadel0/')
+        cy.visit( Cypress.env('CYPRESSBASEURL') + '/user/asmaa0')
     }
 
     overview() {
