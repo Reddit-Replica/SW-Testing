@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import BackToTopButtonObjects from "/home/karimmahmoud/Desktop/CypressAutomation/cypress/e2e/SWE_PROJECT/PageObjects/HomeObjects/BackToTopButtonObjects.cy.js"
+import BackToTopButtonObjects from "./cypress/e2e/SWE_PROJECT/PageObjects/HomeObjects/BackToTopButtonObjects.cy.js"
 
 describe('Back to Top Button Test Cases', function () {
   

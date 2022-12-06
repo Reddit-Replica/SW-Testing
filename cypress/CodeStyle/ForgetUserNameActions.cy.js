@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import ForgetUserNameObjects from "/home/karimmahmoud/Desktop/CypressAutomation/cypress/e2e/SWE_PROJECT/PageObjects/ForgetObjects/ForgetUserNameObjects.cy"
+import ForgetUserNameObjects from "./cypress/e2e/SWE_PROJECT/PageObjects/ForgetObjects/ForgetUserNameObjects.cy"
 
 describe('Reset UserName Page Tests', function () {
     

@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import ForgetPasswordObjects from "/home/karimmahmoud/Desktop/CypressAutomation/cypress/e2e/SWE_PROJECT/PageObjects/ForgetObjects/ForgetPasswordObjects.cy"
+import ForgetPasswordObjects from "./cypress/e2e/SWE_PROJECT/PageObjects/ForgetObjects/ForgetPasswordObjects.cy"
 
 describe('Reset Password Page Tests', function () {
     

@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import ChatAndMessagingObjects from "/home/karimmahmoud/Desktop/CypressAutomation/cypress/e2e/SWE_PROJECT/PageObjects/SettingsObjects/ChatAndMessagingObjects.cy"
+import ChatAndMessagingObjects from "./cypress/e2e/SWE_PROJECT/PageObjects/SettingsObjects/ChatAndMessagingObjects.cy"
 
 describe('Chat And Messaging Tab Tests', function () {
     

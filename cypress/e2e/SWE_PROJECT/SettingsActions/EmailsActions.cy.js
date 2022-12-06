@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import EmailsObjects from "/home/karimmahmoud/Desktop/CypressAutomation/cypress/e2e/SWE_PROJECT/PageObjects/SettingsObjects/EmailsObjects.cy"
+import EmailsObjects from "./cypress/e2e/SWE_PROJECT/PageObjects/SettingsObjects/EmailsObjects.cy"
 
 //TODO: CHECK THE EFFECT OF ALL TEST CASES LATER
 
