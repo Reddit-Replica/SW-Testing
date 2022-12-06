@@ -6,7 +6,7 @@ describe('Reset Password Page Tests', function () {
 //Test Case 1
     //NOTE: CHECK THE EFFECT OF IT
     it('Forget Password', () =>  {    
-        console.log("waer" ,Cypress.env("CYPRESSBASEURL"), "waer")
+        console.log("\n\nwaer" ,Cypress.env("CYPRESSBASEURL"), "waer\n\n")
         const forgetPassword = new ForgetPasswordObjects()
         forgetPassword.navigate()
 
