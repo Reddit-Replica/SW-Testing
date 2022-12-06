@@ -1,7 +1,7 @@
 class createPostObjects{
  
     navigate() {
-        cy.visit('http://read-it.francecentral.cloudapp.azure.com/submit')
+        cy.visit(Cypress.env('CYPRESSBASEURL') +'/submit')
     }
 
     urlChecker(url) {

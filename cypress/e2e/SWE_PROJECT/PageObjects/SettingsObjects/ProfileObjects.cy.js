@@ -1,7 +1,7 @@
 class ProfileObjects {
     
     navigate(){
-        cy.visit('http://localhost/settings/profile')
+        cy.visit( Cypress.env('CYPRESSBASEURL') + '/settings/profile')
     }
 
     //--------------------------------PROFILE INFORMATION------------------------------------// 

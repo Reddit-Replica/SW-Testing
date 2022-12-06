@@ -1,7 +1,7 @@
 class ChatAndMessagingObjects {
     
     navigate(){
-        cy.visit('http://localhost/settings/messaging')
+        cy.visit(Cypress.env('CYPRESSBASEURL') + '/settings/messaging')
     }
 
     //----------------------------------------Test #1----------------------------------------// 

@@ -1,7 +1,7 @@
 class AccountObjects {
     
     navigate(){
-        cy.visit('http://localhost/settings/account')
+        cy.visit(Cypress.env('CYPRESSBASEURL') +'/settings/account')
     }
 
     //----------------------------------------ACCOUNT PREFERENCES----------------------------------------// 

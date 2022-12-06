@@ -1,6 +1,6 @@
 class loginObjects{
     navigate() {
-        cy.visit('http://read-it.francecentral.cloudapp.azure.com/login/')
+        cy.visit(Cypress.env('CYPRESSBASEURL') +'/login')
     }
 
     enterUsername(username) {

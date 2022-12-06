@@ -1,7 +1,7 @@
 class BackToTopButtonObjects{
 
     navigate() {
-        cy.visit('http://localhost/main')
+        cy.visit(Cypress.env('CYPRESSBASEURL') +'/main')
     }
 
     //----------------------------------------Test #1----------------------------------------//     
