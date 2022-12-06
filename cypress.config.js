@@ -3,7 +3,7 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   projectId: 'hp3ona',
   "env":{
-    CYPRESSBASEURL:"localhost"
+    CYPRESSBASEURL:"http://frontend"
   },
   e2e: {
     setupNodeEvents(on, config) {
