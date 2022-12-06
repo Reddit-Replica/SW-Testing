@@ -20,6 +20,7 @@ pipeline {
     stage('Build') {
 
 			steps {
+                echo "hello"
 				sh 'docker build -t waer/web_testing:latest .'
 			}
 		}
