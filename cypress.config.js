@@ -3,6 +3,8 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   screenshotOnRunFailure: false,
   video: false,
+  watchForFileChanges:false,
+  numTestsKeptInMemory:2,
   projectId: 'hp3ona',
   "env":{
     // CYPRESSBASEURL:"http://frontend_test"
