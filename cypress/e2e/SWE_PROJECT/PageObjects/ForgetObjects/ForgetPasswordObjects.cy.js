@@ -2,8 +2,8 @@
 class ForgetPasswordObjects {
     navigate() {
         cy.visit(Cypress.env("CYPRESSBASEURL")+'/login')
-        console.log(Cypress.env("CYPRESSBASEURL"), "waer")
-        cy.log(Cypress.env("CYPRESSBASEURL"), "waer")
+        console.log("waer" ,Cypress.env("CYPRESSBASEURL"), "waer")
+        cy.log( "waer" ,Cypress.env("CYPRESSBASEURL"), "waer")
     } 
     
     //----------------------------------------Test #1----------------------------------------// 
