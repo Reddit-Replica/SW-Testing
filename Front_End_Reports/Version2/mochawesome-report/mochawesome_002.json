@@ -1,0 +1,271 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 8,
+    "passes": 0,
+    "pending": 0,
+    "failures": 8,
+    "start": "2022-11-12T21:14:04.004Z",
+    "end": "2022-11-12T21:14:09.546Z",
+    "duration": 5542,
+    "testsRegistered": 8,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5bdb4bcd-5c2d-4229-b951-c6b0f331436a",
+      "title": "",
+      "fullFile": "cypress/e2e/SWE_PROJECT/ForgetActions/ResetPasswordActions.cy.js",
+      "file": "cypress/e2e/SWE_PROJECT/ForgetActions/ResetPasswordActions.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d031918d-0a1b-4cc2-b1ca-6cd975af3118",
+          "title": "Reset Password Page Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the title of the page",
+              "fullTitle": "Reset Password Page Tests Verify the title of the page",
+              "timedOut": null,
+              "duration": 669,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const ResetPassword = new _ResetPasswordObjects.default();\nResetPassword.navigate();\nResetPassword.TitleChecker();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/reset-password/:id/:token\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/reset-password/:id/:token\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at ResetPasswordObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/ForgetObjects/ResetPasswordObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/ForgetActions/ResetPasswordActions.cy.js:10:22)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "de2aff1b-d3e2-4ea7-ad6f-07879149157d",
+              "parentUUID": "d031918d-0a1b-4cc2-b1ca-6cd975af3118",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Reset pasword with same length and same content",
+              "fullTitle": "Reset Password Page Tests Reset pasword with same length and same content",
+              "timedOut": null,
+              "duration": 660,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const ResetPassword = new _ResetPasswordObjects.default();\nResetPassword.navigate();\nResetPassword.NewPassword('123456789');\nResetPassword.VerifyPassword('123456789');\nResetPassword.NotInValidMessageNewPassword();\nResetPassword.NotInValidMessageVerifyPassword();\nResetPassword.ClickOnSetPasswordButton();\nResetPassword.UrlEqualChecker('http://localhost:8085/reset-password/:id/:token');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/reset-password/:id/:token\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/reset-password/:id/:token\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at ResetPasswordObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/ForgetObjects/ResetPasswordObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/ForgetActions/ResetPasswordActions.cy.js:19:22)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "e1b4e9bc-470c-40c9-a715-cee49911b961",
+              "parentUUID": "d031918d-0a1b-4cc2-b1ca-6cd975af3118",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Reset pasword with same length and different content",
+              "fullTitle": "Reset Password Page Tests Reset pasword with same length and different content",
+              "timedOut": null,
+              "duration": 650,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const ResetPassword = new _ResetPasswordObjects.default();\nResetPassword.navigate();\nResetPassword.NewPassword('123456789');\nResetPassword.VerifyPassword('123456788');\nResetPassword.NotInValidMessageNewPassword();\nResetPassword.InvalidMessageVerifyPassword();\nResetPassword.ClickOnSetPasswordButton();\nResetPassword.UrlEqualChecker('http://localhost:8085/reset-password/:id/:token');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/reset-password/:id/:token\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/reset-password/:id/:token\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at ResetPasswordObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/ForgetObjects/ResetPasswordObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/ForgetActions/ResetPasswordActions.cy.js:34:22)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "a27e6552-5e62-49a7-af77-6fc02ae14333",
+              "parentUUID": "d031918d-0a1b-4cc2-b1ca-6cd975af3118",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Reset pasword with different length",
+              "fullTitle": "Reset Password Page Tests Reset pasword with different length",
+              "timedOut": null,
+              "duration": 656,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const ResetPassword = new _ResetPasswordObjects.default();\nResetPassword.navigate();\nResetPassword.NewPassword('123456789');\nResetPassword.VerifyPassword('123456788a');\nResetPassword.NotInValidMessageNewPassword();\nResetPassword.InvalidMessageVerifyPassword();\nResetPassword.ClickOnSetPasswordButton();\nResetPassword.UrlEqualChecker('http://localhost:8085/reset-password/:id/:token');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/reset-password/:id/:token\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/reset-password/:id/:token\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at ResetPasswordObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/ForgetObjects/ResetPasswordObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/ForgetActions/ResetPasswordActions.cy.js:49:22)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "3e74ebc5-00df-4b23-a939-7352d38ad4c3",
+              "parentUUID": "d031918d-0a1b-4cc2-b1ca-6cd975af3118",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Click on Reset Button With empty passwords",
+              "fullTitle": "Reset Password Page Tests Click on Reset Button With empty passwords",
+              "timedOut": null,
+              "duration": 769,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const ResetPassword = new _ResetPasswordObjects.default();\nResetPassword.navigate();\nResetPassword.ClickOnSetPasswordButton();\nResetPassword.UrlEqualChecker('http://localhost:8085/reset-password/:id/:token');\nResetPassword.InvalidMessageNewPassword();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/reset-password/:id/:token\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/reset-password/:id/:token\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at ResetPasswordObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/ForgetObjects/ResetPasswordObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/ForgetActions/ResetPasswordActions.cy.js:64:22)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "205ca228-e586-400c-bd1c-c1866e8905b7",
+              "parentUUID": "d031918d-0a1b-4cc2-b1ca-6cd975af3118",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Enter Password then go Back then return to Reset Password Page",
+              "fullTitle": "Reset Password Page Tests Enter Password then go Back then return to Reset Password Page",
+              "timedOut": null,
+              "duration": 678,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const ResetPassword = new _ResetPasswordObjects.default();\nResetPassword.navigate();\nResetPassword.NewPassword('123456789');\nResetPassword.VerifyPassword('123456789');\nResetPassword.NotInValidMessageNewPassword();\nResetPassword.NotInValidMessageVerifyPassword();\nResetPassword.GoBack();\nResetPassword.GoForward();\nResetPassword.EmptyCheckerNewPassword();\nResetPassword.EmptyCheckerVerifyPassword();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/reset-password/:id/:token\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/reset-password/:id/:token\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at ResetPasswordObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/ForgetObjects/ResetPasswordObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/ForgetActions/ResetPasswordActions.cy.js:76:22)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "74e4736f-e277-44b0-a668-aeacdf26a8ec",
+              "parentUUID": "d031918d-0a1b-4cc2-b1ca-6cd975af3118",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Enter Password then click on Sign In then return to Reset Password Page",
+              "fullTitle": "Reset Password Page Tests Enter Password then click on Sign In then return to Reset Password Page",
+              "timedOut": null,
+              "duration": 676,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const ResetPassword = new _ResetPasswordObjects.default();\nResetPassword.navigate();\nResetPassword.NewPassword('123456789');\nResetPassword.VerifyPassword('123456789');\nResetPassword.NotInValidMessageNewPassword();\nResetPassword.NotInValidMessageVerifyPassword();\nResetPassword.ClickOnSignUpButton();\nResetPassword.GoBack();\nResetPassword.EmptyCheckerNewPassword();\nResetPassword.EmptyCheckerVerifyPassword();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/reset-password/:id/:token\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/reset-password/:id/:token\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at ResetPasswordObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/ForgetObjects/ResetPasswordObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/ForgetActions/ResetPasswordActions.cy.js:93:22)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "0f3a3e7d-7509-469b-a124-89b1467bdc29",
+              "parentUUID": "d031918d-0a1b-4cc2-b1ca-6cd975af3118",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Enter Password then click on Sign Up then return to Reset Password Page",
+              "fullTitle": "Reset Password Page Tests Enter Password then click on Sign Up then return to Reset Password Page",
+              "timedOut": null,
+              "duration": 664,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const ResetPassword = new _ResetPasswordObjects.default();\nResetPassword.navigate();\nResetPassword.NewPassword('123456789');\nResetPassword.VerifyPassword('123456789');\nResetPassword.NotInValidMessageNewPassword();\nResetPassword.NotInValidMessageVerifyPassword();\nResetPassword.CLickOnLoginButton();\nResetPassword.GoBack();\nResetPassword.EmptyCheckerNewPassword();\nResetPassword.EmptyCheckerVerifyPassword();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/reset-password/:id/:token\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/reset-password/:id/:token\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at ResetPasswordObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/ForgetObjects/ResetPasswordObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/ForgetActions/ResetPasswordActions.cy.js:109:22)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "ea6a74d8-d64e-450c-93a8-a7f17346122e",
+              "parentUUID": "d031918d-0a1b-4cc2-b1ca-6cd975af3118",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "de2aff1b-d3e2-4ea7-ad6f-07879149157d",
+            "e1b4e9bc-470c-40c9-a715-cee49911b961",
+            "a27e6552-5e62-49a7-af77-6fc02ae14333",
+            "3e74ebc5-00df-4b23-a939-7352d38ad4c3",
+            "205ca228-e586-400c-bd1c-c1866e8905b7",
+            "74e4736f-e277-44b0-a668-aeacdf26a8ec",
+            "0f3a3e7d-7509-469b-a124-89b1467bdc29",
+            "ea6a74d8-d64e-450c-93a8-a7f17346122e"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 5422,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

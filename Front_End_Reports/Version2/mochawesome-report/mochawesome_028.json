@@ -1,0 +1,268 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 8,
+    "passes": 1,
+    "pending": 0,
+    "failures": 7,
+    "start": "2022-11-12T21:36:38.752Z",
+    "end": "2022-11-12T21:37:16.778Z",
+    "duration": 38026,
+    "testsRegistered": 8,
+    "passPercent": 12.5,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f62d7188-dcfa-4721-933c-3d3d6b402ef4",
+      "title": "",
+      "fullFile": "cypress/e2e/SWE_PROJECT/ForgetActions/ResetPasswordActions.cy.js",
+      "file": "cypress/e2e/SWE_PROJECT/ForgetActions/ResetPasswordActions.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6e5b77b6-7327-4080-a413-5ac72a555e68",
+          "title": "Reset Password Page Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the title of the page",
+              "fullTitle": "Reset Password Page Tests Verify the title of the page",
+              "timedOut": null,
+              "duration": 5764,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const ResetPassword = new _ResetPasswordObjects.default();\nResetPassword.navigate();\nResetPassword.TitleChecker();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'Reddit' to equal 'reddit.com: Reset your password'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'Reddit' to equal 'reddit.com: Reset your password'\n    at ResetPasswordObjects.TitleChecker (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/ForgetObjects/ResetPasswordObjects.cy.js:9:13)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/ForgetActions/ResetPasswordActions.cy.js:12:22)",
+                "diff": "- 'Reddit'\n+ 'reddit.com: Reset your password'\n"
+              },
+              "uuid": "fdf94452-c7e8-4a07-afdf-9fb5ba1d7895",
+              "parentUUID": "6e5b77b6-7327-4080-a413-5ac72a555e68",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Reset pasword with same length and same content",
+              "fullTitle": "Reset Password Page Tests Reset pasword with same length and same content",
+              "timedOut": null,
+              "duration": 4914,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const ResetPassword = new _ResetPasswordObjects.default();\nResetPassword.navigate();\nResetPassword.NewPassword('123456789');\nResetPassword.VerifyPassword('123456789');\nResetPassword.NotInValidMessageNewPassword();\nResetPassword.NotInValidMessageVerifyPassword();\nResetPassword.ClickOnSetPasswordButton();\nResetPassword.UrlEqualChecker('http://localhost:8085/reset-password/:id/:token');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[class=AnimatedForm__submitButton]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[class=AnimatedForm__submitButton]`, but never found it.\n    at ResetPasswordObjects.ClickOnSetPasswordButton (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/ForgetObjects/ResetPasswordObjects.cy.js:35:13)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/ForgetActions/ResetPasswordActions.cy.js:25:22)",
+                "diff": null
+              },
+              "uuid": "99d719ba-71a5-4dd2-8d4f-3db134dd8736",
+              "parentUUID": "6e5b77b6-7327-4080-a413-5ac72a555e68",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Reset pasword with same length and different content",
+              "fullTitle": "Reset Password Page Tests Reset pasword with same length and different content",
+              "timedOut": null,
+              "duration": 5015,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const ResetPassword = new _ResetPasswordObjects.default();\nResetPassword.navigate();\nResetPassword.NewPassword('123456789');\nResetPassword.VerifyPassword('123456788');\nResetPassword.NotInValidMessageNewPassword();\nResetPassword.InvalidMessageVerifyPassword();\nResetPassword.ClickOnSetPasswordButton();\nResetPassword.UrlEqualChecker('http://localhost:8085/reset-password/:id/:token');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[class=AnimatedForm__submitButton]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[class=AnimatedForm__submitButton]`, but never found it.\n    at ResetPasswordObjects.ClickOnSetPasswordButton (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/ForgetObjects/ResetPasswordObjects.cy.js:35:13)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/ForgetActions/ResetPasswordActions.cy.js:40:22)",
+                "diff": null
+              },
+              "uuid": "52ce7e38-0720-4e3e-a28f-58ad391ecb4a",
+              "parentUUID": "6e5b77b6-7327-4080-a413-5ac72a555e68",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Reset pasword with different length",
+              "fullTitle": "Reset Password Page Tests Reset pasword with different length",
+              "timedOut": null,
+              "duration": 5132,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const ResetPassword = new _ResetPasswordObjects.default();\nResetPassword.navigate();\nResetPassword.NewPassword('123456789');\nResetPassword.VerifyPassword('123456788a');\nResetPassword.NotInValidMessageNewPassword();\nResetPassword.InvalidMessageVerifyPassword();\nResetPassword.ClickOnSetPasswordButton();\nResetPassword.UrlEqualChecker('http://localhost:8085/reset-password/:id/:token');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[class=AnimatedForm__submitButton]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[class=AnimatedForm__submitButton]`, but never found it.\n    at ResetPasswordObjects.ClickOnSetPasswordButton (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/ForgetObjects/ResetPasswordObjects.cy.js:35:13)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/ForgetActions/ResetPasswordActions.cy.js:55:22)",
+                "diff": null
+              },
+              "uuid": "72ffd8f2-b4bd-4758-8b03-8ef9ab133152",
+              "parentUUID": "6e5b77b6-7327-4080-a413-5ac72a555e68",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Click on Reset Button With empty passwords",
+              "fullTitle": "Reset Password Page Tests Click on Reset Button With empty passwords",
+              "timedOut": null,
+              "duration": 4590,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const ResetPassword = new _ResetPasswordObjects.default();\nResetPassword.navigate();\nResetPassword.ClickOnSetPasswordButton();\nResetPassword.UrlEqualChecker('http://localhost:8085/reset-password/:id/:token');\nResetPassword.InvalidMessageNewPassword();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[class=AnimatedForm__submitButton]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[class=AnimatedForm__submitButton]`, but never found it.\n    at ResetPasswordObjects.ClickOnSetPasswordButton (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/ForgetObjects/ResetPasswordObjects.cy.js:35:13)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/ForgetActions/ResetPasswordActions.cy.js:66:22)",
+                "diff": null
+              },
+              "uuid": "b1dc047e-9207-445c-96a6-c2b81a5e7912",
+              "parentUUID": "6e5b77b6-7327-4080-a413-5ac72a555e68",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Enter Password then go Back then return to Reset Password Page",
+              "fullTitle": "Reset Password Page Tests Enter Password then go Back then return to Reset Password Page",
+              "timedOut": null,
+              "duration": 1270,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const ResetPassword = new _ResetPasswordObjects.default();\nResetPassword.navigate();\nResetPassword.NewPassword('123456789');\nResetPassword.VerifyPassword('123456789');\nResetPassword.NotInValidMessageNewPassword();\nResetPassword.NotInValidMessageVerifyPassword();\nResetPassword.GoBack();\nResetPassword.GoForward();\nResetPassword.EmptyCheckerNewPassword();\nResetPassword.EmptyCheckerVerifyPassword();",
+              "err": {},
+              "uuid": "3684ee2b-f965-4c30-8e08-360ba7506ee8",
+              "parentUUID": "6e5b77b6-7327-4080-a413-5ac72a555e68",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Enter Password then click on Sign In then return to Reset Password Page",
+              "fullTitle": "Reset Password Page Tests Enter Password then click on Sign In then return to Reset Password Page",
+              "timedOut": null,
+              "duration": 4899,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const ResetPassword = new _ResetPasswordObjects.default();\nResetPassword.navigate();\nResetPassword.NewPassword('123456789');\nResetPassword.VerifyPassword('123456789');\nResetPassword.NotInValidMessageNewPassword();\nResetPassword.NotInValidMessageVerifyPassword();\nResetPassword.ClickOnSignUpButton();\nResetPassword.GoBack();\nResetPassword.EmptyCheckerNewPassword();\nResetPassword.EmptyCheckerVerifyPassword();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[id=signup]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[id=signup]`, but never found it.\n    at ResetPasswordObjects.ClickOnSignUpButton (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/ForgetObjects/ResetPasswordObjects.cy.js:56:13)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/ForgetActions/ResetPasswordActions.cy.js:99:22)",
+                "diff": null
+              },
+              "uuid": "838ecbdf-41aa-44a5-abfb-6d1252e997c0",
+              "parentUUID": "6e5b77b6-7327-4080-a413-5ac72a555e68",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Enter Password then click on Sign Up then return to Reset Password Page",
+              "fullTitle": "Reset Password Page Tests Enter Password then click on Sign Up then return to Reset Password Page",
+              "timedOut": null,
+              "duration": 5120,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const ResetPassword = new _ResetPasswordObjects.default();\nResetPassword.navigate();\nResetPassword.NewPassword('123456789');\nResetPassword.VerifyPassword('123456789');\nResetPassword.NotInValidMessageNewPassword();\nResetPassword.NotInValidMessageVerifyPassword();\nResetPassword.CLickOnLoginButton();\nResetPassword.GoBack();\nResetPassword.EmptyCheckerNewPassword();\nResetPassword.EmptyCheckerVerifyPassword();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[id=login]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[id=login]`, but never found it.\n    at ResetPasswordObjects.CLickOnLoginButton (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/ForgetObjects/ResetPasswordObjects.cy.js:41:13)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/ForgetActions/ResetPasswordActions.cy.js:115:22)",
+                "diff": null
+              },
+              "uuid": "f8910391-5c60-4e46-a3f9-6df4ed783a3a",
+              "parentUUID": "6e5b77b6-7327-4080-a413-5ac72a555e68",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3684ee2b-f965-4c30-8e08-360ba7506ee8"
+          ],
+          "failures": [
+            "fdf94452-c7e8-4a07-afdf-9fb5ba1d7895",
+            "99d719ba-71a5-4dd2-8d4f-3db134dd8736",
+            "52ce7e38-0720-4e3e-a28f-58ad391ecb4a",
+            "72ffd8f2-b4bd-4758-8b03-8ef9ab133152",
+            "b1dc047e-9207-445c-96a6-c2b81a5e7912",
+            "838ecbdf-41aa-44a5-abfb-6d1252e997c0",
+            "f8910391-5c60-4e46-a3f9-6df4ed783a3a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 36704,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

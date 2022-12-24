@@ -1,0 +1,340 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 11,
+    "passes": 0,
+    "pending": 0,
+    "failures": 11,
+    "start": "2022-11-12T21:15:18.459Z",
+    "end": "2022-11-12T21:15:25.892Z",
+    "duration": 7433,
+    "testsRegistered": 11,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c27e1703-d1a3-4e51-ae63-cc00af2adc7a",
+      "title": "",
+      "fullFile": "cypress/e2e/SWE_PROJECT/SettingsActions/ProfileActions.cy.js",
+      "file": "cypress/e2e/SWE_PROJECT/SettingsActions/ProfileActions.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "523d3258-a8b9-42f8-a49a-630467c2aac4",
+          "title": "Feed Settings Tab Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Display name (optional)",
+              "fullTitle": "Feed Settings Tab Tests Display name (optional)",
+              "timedOut": null,
+              "duration": 745,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const Profile = new _ProfileObjects.default();\nProfile.navigate();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/profile\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/profile\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at ProfileObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SettingsObjects/ProfileObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SettingsActions/ProfileActions.cy.js:12:16)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "284c7d2b-db2b-4290-ae09-f3a76122df89",
+              "parentUUID": "523d3258-a8b9-42f8-a49a-630467c2aac4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "About (optional)",
+              "fullTitle": "Feed Settings Tab Tests About (optional)",
+              "timedOut": null,
+              "duration": 656,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const Profile = new _ProfileObjects.default();\nProfile.navigate();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/profile\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/profile\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at ProfileObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SettingsObjects/ProfileObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SettingsActions/ProfileActions.cy.js:21:16)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "e49f0e0b-fc85-4d05-a4fb-0644aa55f7e7",
+              "parentUUID": "523d3258-a8b9-42f8-a49a-630467c2aac4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Social links (5 max)",
+              "fullTitle": "Feed Settings Tab Tests Social links (5 max)",
+              "timedOut": null,
+              "duration": 643,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const Profile = new _ProfileObjects.default();\nProfile.navigate();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/profile\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/profile\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at ProfileObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SettingsObjects/ProfileObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SettingsActions/ProfileActions.cy.js:30:16)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "0ba605b0-415b-4b9a-9bc5-a962df77feec",
+              "parentUUID": "523d3258-a8b9-42f8-a49a-630467c2aac4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Profile picture",
+              "fullTitle": "Feed Settings Tab Tests Profile picture",
+              "timedOut": null,
+              "duration": 622,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const Profile = new _ProfileObjects.default();\nProfile.navigate();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/profile\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/profile\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at ProfileObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SettingsObjects/ProfileObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SettingsActions/ProfileActions.cy.js:41:16)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "8a139911-f651-4486-88ac-47d516a445ee",
+              "parentUUID": "523d3258-a8b9-42f8-a49a-630467c2aac4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "banner image",
+              "fullTitle": "Feed Settings Tab Tests banner image",
+              "timedOut": null,
+              "duration": 635,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const Profile = new _ProfileObjects.default();\nProfile.navigate();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/profile\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/profile\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at ProfileObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SettingsObjects/ProfileObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SettingsActions/ProfileActions.cy.js:50:16)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "57cea41c-c6df-4789-be88-ccf70adea0dc",
+              "parentUUID": "523d3258-a8b9-42f8-a49a-630467c2aac4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Profile picture and banner image",
+              "fullTitle": "Feed Settings Tab Tests Profile picture and banner image",
+              "timedOut": null,
+              "duration": 646,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const Profile = new _ProfileObjects.default();\nProfile.navigate();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/profile\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/profile\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at ProfileObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SettingsObjects/ProfileObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SettingsActions/ProfileActions.cy.js:59:16)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "c9eb6351-eb04-4d64-829c-6180ad3bfa1c",
+              "parentUUID": "523d3258-a8b9-42f8-a49a-630467c2aac4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "NSFW",
+              "fullTitle": "Feed Settings Tab Tests NSFW",
+              "timedOut": null,
+              "duration": 656,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const Profile = new _ProfileObjects.default();\nProfile.navigate();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/profile\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/profile\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at ProfileObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SettingsObjects/ProfileObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SettingsActions/ProfileActions.cy.js:70:16)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "39140df8-45f6-41d2-ae51-a2514e7c790a",
+              "parentUUID": "523d3258-a8b9-42f8-a49a-630467c2aac4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Allow people to follow you",
+              "fullTitle": "Feed Settings Tab Tests Allow people to follow you",
+              "timedOut": null,
+              "duration": 653,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const Profile = new _ProfileObjects.default();\nProfile.navigate();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/profile\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/profile\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at ProfileObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SettingsObjects/ProfileObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SettingsActions/ProfileActions.cy.js:80:16)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "16606158-5788-4a0e-b719-d3cc38bae70f",
+              "parentUUID": "523d3258-a8b9-42f8-a49a-630467c2aac4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Content visibility",
+              "fullTitle": "Feed Settings Tab Tests Content visibility",
+              "timedOut": null,
+              "duration": 694,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const Profile = new _ProfileObjects.default();\nProfile.navigate();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/profile\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/profile\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at ProfileObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SettingsObjects/ProfileObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SettingsActions/ProfileActions.cy.js:89:16)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "c79debef-ea54-4683-ba66-e819b8d966c2",
+              "parentUUID": "523d3258-a8b9-42f8-a49a-630467c2aac4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Active in communities visibility",
+              "fullTitle": "Feed Settings Tab Tests Active in communities visibility",
+              "timedOut": null,
+              "duration": 670,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const Profile = new _ProfileObjects.default();\nProfile.navigate();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/profile\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/profile\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at ProfileObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SettingsObjects/ProfileObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SettingsActions/ProfileActions.cy.js:98:16)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "c7b42a61-1b58-42d2-a471-c5a097b6b510",
+              "parentUUID": "523d3258-a8b9-42f8-a49a-630467c2aac4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Profile Moderation page",
+              "fullTitle": "Feed Settings Tab Tests Profile Moderation page",
+              "timedOut": null,
+              "duration": 678,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const Profile = new _ProfileObjects.default();\nProfile.navigate();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/profile\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/profile\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at ProfileObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SettingsObjects/ProfileObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SettingsActions/ProfileActions.cy.js:108:16)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "b95419ee-a3b1-4bf1-bc94-1bc727c19ec9",
+              "parentUUID": "523d3258-a8b9-42f8-a49a-630467c2aac4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "284c7d2b-db2b-4290-ae09-f3a76122df89",
+            "e49f0e0b-fc85-4d05-a4fb-0644aa55f7e7",
+            "0ba605b0-415b-4b9a-9bc5-a962df77feec",
+            "8a139911-f651-4486-88ac-47d516a445ee",
+            "57cea41c-c6df-4789-be88-ccf70adea0dc",
+            "c9eb6351-eb04-4d64-829c-6180ad3bfa1c",
+            "39140df8-45f6-41d2-ae51-a2514e7c790a",
+            "16606158-5788-4a0e-b719-d3cc38bae70f",
+            "c79debef-ea54-4683-ba66-e819b8d966c2",
+            "c7b42a61-1b58-42d2-a471-c5a097b6b510",
+            "b95419ee-a3b1-4bf1-bc94-1bc727c19ec9"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 7298,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

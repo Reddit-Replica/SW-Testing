@@ -1,0 +1,417 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 15,
+    "passes": 4,
+    "pending": 0,
+    "failures": 11,
+    "start": "2022-11-12T21:42:20.217Z",
+    "end": "2022-11-12T21:43:32.537Z",
+    "duration": 72320,
+    "testsRegistered": 15,
+    "passPercent": 26.666666666666668,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0568c80d-2f60-4d57-9e7c-7519b8b10e24",
+      "title": "",
+      "fullFile": "cypress/e2e/SWE_PROJECT/SignUpActions/sign_up_second_form.cy.js",
+      "file": "cypress/e2e/SWE_PROJECT/SignUpActions/sign_up_second_form.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e5066e68-ed93-447a-a711-a1185250041f",
+          "title": "Test Sign up second form",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Back to first form",
+              "fullTitle": "Test Sign up second form Back to first form",
+              "timedOut": null,
+              "duration": 5916,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.backButton();\nsignUp.goFirstForm();",
+              "err": {},
+              "uuid": "e2c04960-d406-4f32-bb56-c051724c4499",
+              "parentUUID": "e5066e68-ed93-447a-a711-a1185250041f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Choose one of username suggestions",
+              "fullTitle": "Test Sign up second form Choose one of username suggestions",
+              "timedOut": null,
+              "duration": 8618,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.firstUsernameSugg();\nsignUp.checkUsername();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<input#regUsername>' not to be 'empty'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<input#regUsername>' not to be 'empty'\n    at signUpObjects.checkUsername (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SignUpObjects/signUpObjects.js:163:13)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SignUpActions/sign_up_second_form.cy.js:28:11)",
+                "diff": null
+              },
+              "uuid": "d2051507-125a-4de3-960d-454df41b0e62",
+              "parentUUID": "e5066e68-ed93-447a-a711-a1185250041f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Enter invalid username(with space)",
+              "fullTitle": "Test Sign up second form Enter invalid username(with space)",
+              "timedOut": null,
+              "duration": 7858,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.enterUserName('njkh  khj j jkh');\nsignUp.userNameErrMsg(\"Letters, numbers, dashes, and underscores only. Please try again without symbols.\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.username-error-message`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.username-error-message`, but never found it.\n    at signUpObjects.userNameErrMsg (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SignUpObjects/signUpObjects.js:105:13)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SignUpActions/sign_up_second_form.cy.js:34:11)",
+                "diff": null
+              },
+              "uuid": "dca5f036-57d2-4582-adb3-f9d1ac79f317",
+              "parentUUID": "e5066e68-ed93-447a-a711-a1185250041f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Enter invalid username(with # for example)",
+              "fullTitle": "Test Sign up second form Enter invalid username(with # for example)",
+              "timedOut": null,
+              "duration": 8272,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.enterUserName('njkh#khjjjkh');\nsignUp.userNameErrMsg(\"Letters, numbers, dashes, and underscores only. Please try again without symbols.\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.username-error-message`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.username-error-message`, but never found it.\n    at signUpObjects.userNameErrMsg (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SignUpObjects/signUpObjects.js:105:13)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SignUpActions/sign_up_second_form.cy.js:41:11)",
+                "diff": null
+              },
+              "uuid": "5488ce63-7b7b-4a7f-a64b-7a53512eed1a",
+              "parentUUID": "e5066e68-ed93-447a-a711-a1185250041f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Enter valid username-start with numbers-",
+              "fullTitle": "Test Sign up second form Enter valid username-start with numbers-",
+              "timedOut": null,
+              "duration": 3337,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.enterUserName('1256ftyfjv');\nsignUp.noUserNameErrMsg();",
+              "err": {},
+              "uuid": "b4766be6-04fc-4c3f-a073-1ee576958216",
+              "parentUUID": "e5066e68-ed93-447a-a711-a1185250041f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Enter an existed username",
+              "fullTitle": "Test Sign up second form Enter an existed username",
+              "timedOut": null,
+              "duration": 6867,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.enterUserName('Samaa_Hazem');\nsignUp.userNameErrMsg(\"That username is already taken\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.username-error-message`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.username-error-message`, but never found it.\n    at signUpObjects.userNameErrMsg (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SignUpObjects/signUpObjects.js:105:13)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SignUpActions/sign_up_second_form.cy.js:55:11)",
+                "diff": null
+              },
+              "uuid": "292283a2-6a60-4472-b672-64f0d476f4a9",
+              "parentUUID": "e5066e68-ed93-447a-a711-a1185250041f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Enter a long username",
+              "fullTitle": "Test Sign up second form Enter a long username",
+              "timedOut": null,
+              "duration": 3435,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.enterUserName('Samaa_Hazem323knjk4kkl');\nsignUp.userNameErrMsg(\"Username must be between 3 and 20 characters\");",
+              "err": {},
+              "uuid": "b662a12a-d508-4c22-baea-4396eddae819",
+              "parentUUID": "e5066e68-ed93-447a-a711-a1185250041f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Enter valid username and empty password",
+              "fullTitle": "Test Sign up second form Enter valid username and empty password",
+              "timedOut": null,
+              "duration": 2461,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.enterUserName('Samaa_Hazem222');\nsignUp.signUpEnable();\nsignUp.signUpBotton();\nsignUp.passwordErrMsg(\"Password must be at least 8 characters long\");",
+              "err": {
+                "message": "TypeError: signUp.signUpBotton is not a function",
+                "estack": "TypeError: signUp.signUpBotton is not a function\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SignUpActions/sign_up_second_form.cy.js:69:11)",
+                "diff": null
+              },
+              "uuid": "f98bb4c2-91a1-4df8-9574-7b4dd1e329a7",
+              "parentUUID": "e5066e68-ed93-447a-a711-a1185250041f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Enter valid username and  invalid -short- password",
+              "fullTitle": "Test Sign up second form Enter valid username and  invalid -short- password",
+              "timedOut": null,
+              "duration": 2635,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.enterUserName('Samaa_Hazem222');\nsignUp.enterPassword('12');\nsignUp.signUpEnable();\nsignUp.signUpBotton();\nsignUp.passwordErrMsg(\"Password must be at least 8 characters long\");",
+              "err": {
+                "message": "TypeError: signUp.signUpBotton is not a function",
+                "estack": "TypeError: signUp.signUpBotton is not a function\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SignUpActions/sign_up_second_form.cy.js:78:11)",
+                "diff": null
+              },
+              "uuid": "1f5437a3-7e84-427a-973a-b3026ffefe63",
+              "parentUUID": "e5066e68-ed93-447a-a711-a1185250041f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Enter valid username and invalid -exactly(7)- character password",
+              "fullTitle": "Test Sign up second form Enter valid username and invalid -exactly(7)- character password",
+              "timedOut": null,
+              "duration": 2509,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.enterUserName('Samaa_Hazem222');\nsignUp.enterPassword('asdfghj');\nsignUp.signUpEnable();\nsignUp.signUpBotton();\nsignUp.passwordErrMsg(\"Password must be at least 8 characters long\");",
+              "err": {
+                "message": "TypeError: signUp.signUpBotton is not a function",
+                "estack": "TypeError: signUp.signUpBotton is not a function\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SignUpActions/sign_up_second_form.cy.js:87:11)",
+                "diff": null
+              },
+              "uuid": "bb250af4-deaf-46b7-a837-72119c3d8b53",
+              "parentUUID": "e5066e68-ed93-447a-a711-a1185250041f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Enter valid username and valid -exactly(8)- character password",
+              "fullTitle": "Test Sign up second form Enter valid username and valid -exactly(8)- character password",
+              "timedOut": null,
+              "duration": 3258,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.enterUserName('Samaa_Hazem222');\nsignUp.enterPassword('asdfghje');\nsignUp.noPasswordErrMsg();",
+              "err": {},
+              "uuid": "0bcdfb2a-39ae-4240-83c3-1c2e38e079c3",
+              "parentUUID": "e5066e68-ed93-447a-a711-a1185250041f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Enter valid username and valid -exactly(8)- character password and do not check robot",
+              "fullTitle": "Test Sign up second form Enter valid username and valid -exactly(8)- character password and do not check robot",
+              "timedOut": null,
+              "duration": 2705,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.enterUserName('Samaa_Hazem222');\nsignUp.enterPassword('asdfghje');\nsignUp.signUpEnable();\nsignUp.signUpBotton();\nsignUp.signUpNotDone();",
+              "err": {
+                "message": "TypeError: signUp.signUpBotton is not a function",
+                "estack": "TypeError: signUp.signUpBotton is not a function\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SignUpActions/sign_up_second_form.cy.js:104:11)",
+                "diff": null
+              },
+              "uuid": "b865ab58-17d8-4abe-8690-826e4bcccdf9",
+              "parentUUID": "e5066e68-ed93-447a-a711-a1185250041f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Enter invalid username and valid password and check robot then sign up",
+              "fullTitle": "Test Sign up second form Enter invalid username and valid password and check robot then sign up",
+              "timedOut": null,
+              "duration": 2354,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.enterUserName('Samaa hazem2325');\nsignUp.enterPassword('asdfghje');\nsignUp.notRobot();\nsignUp.signUpEnable();\nsignUp.signUpBotton();\nsignUp.userNameErrMsg(\"Letters, numbers, dashes, and underscores only. Please try again without symbols.\");\nsignUp.signUpNotDone();",
+              "err": {
+                "message": "TypeError: signUp.signUpBotton is not a function",
+                "estack": "TypeError: signUp.signUpBotton is not a function\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SignUpActions/sign_up_second_form.cy.js:114:11)",
+                "diff": null
+              },
+              "uuid": "0c3c18d0-545f-455b-b7dc-0dcdd4543e88",
+              "parentUUID": "e5066e68-ed93-447a-a711-a1185250041f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Enter valid username and valid password and immeditly check robot then sign up",
+              "fullTitle": "Test Sign up second form Enter valid username and valid password and immeditly check robot then sign up",
+              "timedOut": null,
+              "duration": 3585,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.enterUserName('Samaa_hazem22');\nsignUp.enterPassword('asdfghje');\nsignUp.notRobot();\nsignUp.signUpEnable();\nsignUp.signUpBotton();\nsignUp.signUpDone();",
+              "err": {
+                "message": "TypeError: signUp.signUpBotton is not a function",
+                "estack": "TypeError: signUp.signUpBotton is not a function\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SignUpActions/sign_up_second_form.cy.js:126:11)",
+                "diff": null
+              },
+              "uuid": "b18ed6c0-f0d8-4540-a01a-ce8e43d5f3be",
+              "parentUUID": "e5066e68-ed93-447a-a711-a1185250041f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ability to click on (Sign up) without writing any thing",
+              "fullTitle": "Test Sign up second form Ability to click on (Sign up) without writing any thing",
+              "timedOut": null,
+              "duration": 6902,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.signUpEnable();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<button#signup-button.button-class>' to be 'enabled'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<button#signup-button.button-class>' to be 'enabled'\n    at signUpObjects.signUpEnable (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SignUpObjects/signUpObjects.js:128:13)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SignUpActions/sign_up_second_form.cy.js:132:11)",
+                "diff": null
+              },
+              "uuid": "a46e498d-6fc9-4961-acc2-ca4313df9d40",
+              "parentUUID": "e5066e68-ed93-447a-a711-a1185250041f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e2c04960-d406-4f32-bb56-c051724c4499",
+            "b4766be6-04fc-4c3f-a073-1ee576958216",
+            "b662a12a-d508-4c22-baea-4396eddae819",
+            "0bcdfb2a-39ae-4240-83c3-1c2e38e079c3"
+          ],
+          "failures": [
+            "d2051507-125a-4de3-960d-454df41b0e62",
+            "dca5f036-57d2-4582-adb3-f9d1ac79f317",
+            "5488ce63-7b7b-4a7f-a64b-7a53512eed1a",
+            "292283a2-6a60-4472-b672-64f0d476f4a9",
+            "f98bb4c2-91a1-4df8-9574-7b4dd1e329a7",
+            "1f5437a3-7e84-427a-973a-b3026ffefe63",
+            "bb250af4-deaf-46b7-a837-72119c3d8b53",
+            "b865ab58-17d8-4abe-8690-826e4bcccdf9",
+            "0c3c18d0-545f-455b-b7dc-0dcdd4543e88",
+            "b18ed6c0-f0d8-4540-a01a-ce8e43d5f3be",
+            "a46e498d-6fc9-4961-acc2-ca4313df9d40"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 70712,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
