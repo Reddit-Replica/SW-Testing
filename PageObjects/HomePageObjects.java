@@ -1,145 +1,164 @@
 package PageObjects;
 
-import java.util.List;
+import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 
 public class HomePageObjects {
 
-	static AndroidDriver<WebElement> driver2;
+	static AndroidDriver<MobileElement> driver2;
+	SoftAssert softassert;
+	String expectedTitle;
+	String actualTitle;
 
 	public HomePageObjects() {
 	}
 
-	public HomePageObjects(AndroidDriver<WebElement> driver_outer) {
+	public HomePageObjects(AndroidDriver<MobileElement> driver_outer) {
 		driver2 = driver_outer;
 	}
 
+	public void EnterUserName(String Username) throws Exception {
+		MobileElement EnterUserName = driver2
+				.findElementByXPath("//android.widget.EditText[@bounds='[30,753][690,862]']");
+		EnterUserName.click();
+		EnterUserName.sendKeys(Username);
+	}
+
+	public void EnterPassword(String password) throws Exception {
+		MobileElement EnterPassword = driver2.findElementByXPath("//android.widget.EditText[@text='Password']");
+		EnterPassword.click();
+		EnterPassword.sendKeys(password);
+	}
+
+	public void ContinueButton() throws Exception {
+		MobileElement ContinueButton = driver2.findElementByXPath("//android.widget.Button[@content-desc='Continue']");
+		ContinueButton.click();
+		Assert.assertEquals(ContinueButton.getAttribute("contentDescription"), "Continue");
+
+	}
+
+	// Start of Home objects
+
+	public void ThreeSmallLines() throws Exception {
+		MobileElement ThreeSmallLines = driver2
+				.findElementByXPath("//android.widget.Button[@bounds='[0,64][112,176]']");
+		ThreeSmallLines.click();
+	}
+
 	public void ModeratingButton() throws Exception {
-		List<WebElement> moderatingButton = driver2.findElements(By.xpath("//android.widget.Button"));
-		moderatingButton.get(0).click();
+		MobileElement ModeratingButton = driver2
+				.findElementByXPath("//android.widget.Button[@content-desc='Moderating']");
+		ModeratingButton.click();
 	}
 
-	public void HomePopularButton() throws Exception {
-		List<WebElement> homePopularButton = driver2.findElements(By.xpath("//android.widget.Button"));
-		homePopularButton.get(1).click();
+	public void ModFeedButton() throws Exception {
+		MobileElement ModFeedButton = driver2.findElementByXPath("//android.widget.Button[@content-desc='Mod Feed']");
+		ModFeedButton.click();
 	}
 
-	public void SearchButton() throws Exception {
-		List<WebElement> searchButton = driver2.findElements(By.xpath("//android.widget.Button"));
-		searchButton.get(2).click();
+	public void ModQueueButton() throws Exception {
+		MobileElement ModQueueButton = driver2.findElementByXPath("//android.widget.Button[@content-desc='Mod Queue']");
+		ModQueueButton.click();
 	}
 
-	public void PostOptionsButton() throws Exception {
-		List<WebElement> postOptionsButton = driver2.findElements(By.xpath("//android.widget.Button"));
-		postOptionsButton.get(3).click();
+	public void ClickOnASubReddit(String subridditname) throws Exception {
+		MobileElement ClickOnASubReddit = driver2
+				.findElementByXPath("//android.view.View[@bounds='[20,580][608,708]']");
+		ClickOnASubReddit.click();
+		Assert.assertEquals(ClickOnASubReddit.getAttribute("contentDescription"), "r/karim");
+
 	}
 
-	public void SaveInPostOptionsButton() throws Exception {
-		List<WebElement> saveInPostOptionsButton = driver2.findElements(By.xpath("//android.view.View"));
-		saveInPostOptionsButton.get(0).click();
+	public void CheckOnHotInSubReddit() throws Exception {
+		MobileElement CheckOnHotInSubReddit = driver2
+				.findElementByXPath("//android.widget.Button[@bounds='[0,470][266,566]']");
+		Assert.assertEquals(CheckOnHotInSubReddit.getAttribute("contentDescription"), "Hot");
 	}
 
-	public void HidePostInPostOptionsButton() throws Exception {
-		List<WebElement> hidePostInPostOptionsButton = driver2.findElements(By.xpath("//android.view.View"));
-		hidePostInPostOptionsButton.get(1).click();
+	public void ClickOnYourCommunities() throws Exception {
+		MobileElement ClickOnYourCommunities = driver2
+				.findElementByXPath("//android.widget.Button[@content-desc='Your Communities']");
+		ClickOnYourCommunities.click();
 	}
 
-	public void ReportInPostOptionsButton() throws Exception {
-		List<WebElement> reportInPostOptionsButton = driver2.findElements(By.xpath("//android.view.View"));
-		reportInPostOptionsButton.get(2).click();
+	public void ClickOnCreateCommunity(String subridditname) throws Exception {
+		MobileElement ClickOnCreateCommunity = driver2
+				.findElementByXPath("//android.widget.Button[@content-desc='Create a community']");
+		ClickOnCreateCommunity.click();
 	}
 
-	public void BlockAccountInPostOptionsButton() throws Exception {
-		List<WebElement> blockAccountInPostOptionsButton = driver2.findElements(By.xpath("//android.view.View"));
-		blockAccountInPostOptionsButton.get(3).click();
+	public void ClickOnFavourities() throws Exception {
+		MobileElement ClickOnFavourities = driver2
+				.findElementByXPath("//android.widget.Button[@content-desc='Favorites']");
+		ClickOnFavourities.click();
+
 	}
 
-	public void UpVoteInPostButton() throws Exception {
-		List<WebElement> upVoteInPostButton = driver2.findElements(By.xpath("//android.widget.Button"));
-		upVoteInPostButton.get(4).click();
+	public void CheckModToolsInSubreddit() throws Exception {
+		MobileElement CheckModToolsInSubreddit = driver2
+				.findElementByXPath("//android.widget.Button[@bounds='[452,200][680,296]']");
+		Assert.assertEquals(CheckModToolsInSubreddit.getAttribute("contentDescription"), "Mod Tool");
+
 	}
 
-	public void DownVoteInPostButton() throws Exception {
-		List<WebElement> downVoteInPostButton = driver2.findElements(By.xpath("//android.widget.Button"));
-		downVoteInPostButton.get(5).click();
+	public void ClickOnHomeButton() throws Exception {
+		MobileElement ClickOnHomeButton = driver2
+				.findElementByXPath("//android.view.View[@bounds='[0,1490][144,1598]']");
+		ClickOnHomeButton.click();
+		// Assert.assertEquals(ClickOnHomeButton.getAttribute("contentDescription"),
+		// "Home\r\n" + "Tab 1 of 5");
+
 	}
 
-	public void CommentInPosButton() throws Exception {
-		List<WebElement> commentInPosButton = driver2.findElements(By.xpath("//android.view.View"));
-		commentInPosButton.get(1).click();
+	public void ClickOnDiscoverButton() throws Exception {
+		MobileElement ClickOnDiscoverButton = driver2
+				.findElementByXPath("//android.view.View[@bounds='[144,1490][288,1598]']");
+		ClickOnDiscoverButton.click();
+		// Assert.assertEquals(ClickOnDiscoverButton.getAttribute("contentDescription"),
+		// "Discover\r\n" + "Tab 2 of 5");
+
 	}
 
-	public void ShareInPosButton() throws Exception {
-		List<WebElement> shareInPosButton = driver2.findElements(By.xpath("//android.view.View"));
-		shareInPosButton.get(2).click();
+	public void ClickOnCreateButton() throws Exception {
+		MobileElement ClickOnCreateButton = driver2
+				.findElementByXPath("//android.view.View[@bounds='[288,1490][432,1598]']");
+		ClickOnCreateButton.click();
+		// Assert.assertEquals(ClickOnCreateButton.getAttribute("contentDescription"),
+		// "Inbox\r\n" + "Tab 5 of 5");
+
 	}
 
-	public void RedditLogo() throws Exception {
-		List<WebElement> redditLogo = driver2.findElements(By.xpath("//android.widget.ImageView"));
-		redditLogo.get(0).click();
+	public void ClickOnInboxButton() throws Exception {
+		MobileElement ClickOnInboxButton = driver2
+				.findElementByXPath("//android.view.View[@bounds='[576,1490][720,1598]']");
+		ClickOnInboxButton.click();
+		// Assert.assertEquals(ClickOnInboxButton.getAttribute("contentDescription"),
+		// "Mod Tool");
+
 	}
 
-	public void AccountOptions() throws Exception {
-		List<WebElement> accountOptions = driver2.findElements(By.xpath("//android.widget.Button"));
-		accountOptions.get(0).click();
+	public void ClickOnSearchIconButton() throws Exception {
+		MobileElement ClickOnSearchIconButton = driver2
+				.findElementByXPath("//android.widget.Button[@bounds=\"[528,64][624,176]\"]");
+		ClickOnSearchIconButton.click();
 	}
 
-	public void OnlineOffline() throws Exception {
-		List<WebElement> onlineOffline = driver2.findElements(By.xpath("//android.widget.Button"));
-		onlineOffline.get(1).click();
+	public void SearchTab(String searchContent) throws Exception {
+		MobileElement SearchTab = driver2.findElementByXPath("//android.widget.EditText[@text=\"Search Reddit\"]");
+		SearchTab.click();
+		SearchTab.sendKeys(searchContent);
+		driver2.pressKey(new KeyEvent(AndroidKey.ENTER));
 	}
 
-	public void ChangeProfilePicture() throws Exception {
-		List<WebElement> changeProfilePicture = driver2.findElements(By.xpath("//android.widget.Button"));
-		changeProfilePicture.get(2).click();
+	public void ClickOnRedditIcon() throws Exception {
+		MobileElement ClickOnRedditIcon = driver2
+				.findElementByXPath("//android.view.View[@bounds=\"[624,64][720,176]\"]");
+		ClickOnRedditIcon.click();
 	}
 
-	public void MyProfile() throws Exception {
-		List<WebElement> myProfile = driver2.findElements(By.xpath("//android.widget.Button"));
-		myProfile.get(3).click();
-	}
-
-	public void CreateACommunity() throws Exception {
-		List<WebElement> createACommunity = driver2.findElements(By.xpath("//android.widget.Button"));
-		createACommunity.get(4).click();
-	}
-
-	public void Saved() throws Exception {
-		List<WebElement> saved = driver2.findElements(By.xpath("//android.widget.Button"));
-		saved.get(5).click();
-	}
-
-	public void History() throws Exception {
-		List<WebElement> history = driver2.findElements(By.xpath("//android.widget.Button"));
-		history.get(6).click();
-	}
-
-	public void PendingPosts() throws Exception {
-		List<WebElement> pendingPosts = driver2.findElements(By.xpath("//android.widget.Button"));
-		pendingPosts.get(7).click();
-	}
-
-	public void Drafts() throws Exception {
-		List<WebElement> drafts = driver2.findElements(By.xpath("//android.widget.Button"));
-		drafts.get(8).click();
-	}
-
-	public void Settings() throws Exception {
-		List<WebElement> settings = driver2.findElements(By.xpath("//android.widget.Button"));
-		settings.get(9).click();
-	}
-
-	/*
-	 * public void HomeButton() throws Exception { List<WebElement> homeButton =
-	 * driver2.findElements(By.xpath("//android.view.View"));
-	 * homeButton.get(4).click(); }
-	 * 
-	 * public void DiscoverButton() throws Exception { List<WebElement>
-	 * discoverButton = driver2.findElements(By.xpath("//android.view.View"));
-	 * discoverButton.get(0).click(); }
-	 */
 }
