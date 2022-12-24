@@ -1,93 +1,63 @@
 /// <reference types="cypress" />
 
 import AccountObjects from "../PageObjects/SettingsObjects/AccountObjects.cy"
+import EmailsObjects from "../PageObjects/SettingsObjects/EmailsObjects.cy"
 
-describe('Feed Settings Tab Tests', function () {
+const Emails = new EmailsObjects()
+const Account = new AccountObjects()
+  
+beforeEach({scrollBehavior:false},() => {
+    Emails.navigate()  
+    Emails.enterUsername('karim22') 
+    Emails.enterPassword('Karim@0107228700')     
+    Emails.submit() 
+    Emails.TopRightBar()
+    Emails.UserSettings()
+})
+
+describe('Feed Settings Tab Tests',{scrollBehavior:false}, function () {
     
     //----------------------------------------ACCOUNT PREFERENCES Section----------------------------------------//
     //Test Case 1
-    it('Email address', () =>  {    
+    it('Email address',{scrollBehavior:false}, () =>  {    
+        Account.EmailAddress()
+        Account.CurrentPassword('Karim@0107228700')
+        //Account.NewMail('karim.mohamed003@eng-st.cu.edu.eg')
+        Account.NewMail('karimmahmoud862002@gmail.com')
+        Account.SaveEmail()
+        Account.EmailAddressAfterChanged('karimmahmoud862002@gmail.com')
+    })
 
-        const Account = new AccountObjects()
-        Account.navigate()
+    //Test Case 11
+    it('Change Password', {scrollBehavior:false},() =>  {    
+        Account.EmailAddress()
+        Account.CurrentPassword('Karim@0107228700')
+        Account.NewMail('karimmahmoud862002@gmail.com')
+        Account.EnabledSaveEmail()
+        Account.SaveEmail()
 
     })
 
     //Test Case 2
-    it('Gender', () =>  {    
-    
-        const Account = new AccountObjects()
-        Account.navigate()
-        
-        
+    it('Gender',{scrollBehavior:false}, () =>  {    
+        Account.EmailAddress()
+        Account.Gender("Man")     
+        Account.CheckGenderAfterChanged("MAN")
     })
     
-    //Test Case 3
-    it('Display language (beta)', () =>  {    
-    
-        const Account = new AccountObjects()
-        Account.navigate()
-        
-    })
     
     //Test Case 4
-    it('Country', () =>  {    
-    
-        const Account = new AccountObjects()
-        Account.navigate()
-        
-    })
-    
-    //----------------------------------------CONNECTED ACCOUNTS Section----------------------------------------//
-    //Test Case 5
-    it('Connect to Twitter', () =>  {    
-    
-        const Account = new AccountObjects()
-        Account.navigate()
-        
-    })
-    
-    //Test Case 6
-    it('Connect to Apple', () =>  {    
-    
-        const Account = new AccountObjects()
-        Account.navigate()
-        
-    })
-    
-    
-    //Test Case 7
-    it('Connected to Google', () =>  {    
-    
-        const Account = new AccountObjects()
-        Account.navigate()
-        
-    })
-    
-    //----------------------------------------BETA TESTS Section----------------------------------------//
-    //Test Case 8
-    it('Opt into beta tests', () =>  {    
-    
-        const Account = new AccountObjects()
-        Account.navigate()
-        
-    })
-    
-    //Test Case 9
-    it('Opt out of the redesign', () =>  {    
-    
-        const Account = new AccountObjects()
-        Account.navigate()
-        
+    it('Country', {scrollBehavior:false},() =>  {    
+        Account.EmailAddress()
+        Account.Country(0,0)
+
     })
     
     //----------------------------------------DELETE ACCOUNT Section----------------------------------------//
     //Test Case 10
-    it('DELETE ACCOUNT', () =>  {    
-    
-        const Account = new AccountObjects()
-        Account.navigate()
-        
+    it('DELETE ACCOUNT',{scrollBehavior:false}, () =>  {    
+        Account.EmailAddress()
+        Account.DeleteAccount()
     })
       
 })

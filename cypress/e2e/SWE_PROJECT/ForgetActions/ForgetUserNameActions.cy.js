@@ -410,6 +410,7 @@ describe('Reset UserName Page Tests', function () {
  
     })
 
+    /*
     //Test Case 31
     it('.web is not a valid top-level domain', () =>  {    
 
@@ -448,6 +449,6 @@ describe('Reset UserName Page Tests', function () {
         forgetUserName.InvalidMessage()
  
     })
-    
+    */
 
 })

@@ -1,37 +1,28 @@
 class FeedSettingsObjects{
 
-    navigate() {
-        cy.visit(Cypress.env('CYPRESSBASEURL') +'/settings/feed')
-    }
-    //----------------------------CONTENT PREFERENCES Section--------------------------------//
-
     //----------------------------------------Test #1----------------------------------------//     
+    
+    FeedSettingsButton(){
+        cy.get('[id=feed-settings]')
+            .click()
+    }
+
     AdultContent(){
         cy.get('[id=button-one]')
             .should('be.visible')
             .click()        
     }
 
-    //----------------------------------------Test #2----------------------------------------//     
-    SafeBrowsingMode(){
-        cy.get('[id=button-two]')
-            .should('be.visible')
-            .click()        
+    EnableAdultContent(){
+        cy.get('[id=button-one]')
+            .should('be.enabled')
     }
-
-    //----------------------------------------Test #3----------------------------------------//     
-    EnableHomeFeedRecommendations(){
-        cy.get('[id=button-three]')
-            .should('be.visible')
-            .click()        
+    
+    DisableAdultContent(){
+        cy.get('[id=button-one]')
+            .should('not.be.selected')
     }
-
-    //----------------------------------------Test #4----------------------------------------//     
-    EnableLiveRecommendations(){
-        cy.get('[id=button-four]')
-            .should('be.visible')
-            .click()        
-    }
+    
 
     //----------------------------------------Test #5----------------------------------------//     
     AutoplayMedia(){
@@ -39,49 +30,20 @@ class FeedSettingsObjects{
             .should('be.visible')
             .click()        
     }
-
-    //----------------------------------------Test #6----------------------------------------//     
-    ReduceAnimations(){
-        cy.get('[id=button-six]')
-            .should('be.visible')
-            .click()        
+    
+    EnableAutoplayMedia(){
+        cy.get('[id=button-five]')
+            .should('be.enabled')    
     }
 
-    //----------------------------------------Test #7----------------------------------------//     
-    CommunityThemes(){
-        cy.get('[id=button-seven]')
-            .should('be.visible')
-            .click()        
-    }
-
-    //----------------------------------------Test #8----------------------------------------//     
-    CommunityContentSort(){
-        cy.get('[class=items-span]')
-            .should('be.visible')
-            .click()        
-    }
-
-    //----------------------------------------Test #9----------------------------------------//     
-    RememberPerCommunity(){
-        cy.get('[id=button-eight]')
-            .should('be.visible')
-            .click()        
-    }
-
-    //----------------------------------------Test #10----------------------------------------//     
-    OpenPostsInNewTab(){
-        cy.get('[id=button-nine]')
-            .should('be.visible')
-            .click()        
+    DisableAutoplayMedia(){
+        cy.get('[id=button-five]')
+            .should('not.be.selected')   
     }
     
-    //----------------------------CONTENT PREFERENCES Section--------------------------------//
-
-    //----------------------------------------Test #11----------------------------------------//     
-    DefaultToMarkdown(){
-        cy.get('[id=button-ten]')
-            .should('be.visible')
-            .click()        
+    SettingsChangedSuccessfully(){
+        cy.get('[class=right]')
+            .should('have.text',"settings changed successfully")
     }
 
 }

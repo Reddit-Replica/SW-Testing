@@ -1,10 +1,11 @@
 class ProfileObjects {
     
-    navigate(){
-        cy.visit( Cypress.env('CYPRESSBASEURL') + '/settings/profile')
-    }
-
     //--------------------------------PROFILE INFORMATION------------------------------------// 
+
+    ProfileButton(){
+        cy.get('[id=profile-settings]')
+            .click()
+    }
 
     //----------------------------------------Test #1----------------------------------------// 
    
@@ -14,6 +15,11 @@ class ProfileObjects {
             .type(displayName)
     }
 
+    CheckDisplayedName(optionalName){
+        cy.get('[id=dispalyname]')
+            .should('have.text',optionalName)
+    }
+
     //----------------------------------------Test #2----------------------------------------// 
     AboutOptional(about) {
         cy.get('[id=about]')
@@ -21,39 +27,84 @@ class ProfileObjects {
             .type(about)
     }
 
+    CheckAboutOptional(optionalName2){
+        cy.get('[id=dispalyname]')
+            .should('have.text',optionalName2)
+    }
+
     //----------------------------------------Test #3----------------------------------------// 
-    SocialLinks5Max() {
-        cy.get('[id=links-profile-settings]')
+    AddSocialLink() {
+        cy.get('[id=add-social-link-button]')
             .should('be.visible')
             .click()
     }
 
+    SelectAddingSOcialLink(socialLinkType,socialLinkName){
+        cy.get(socialLinkType)
+            .should('have.text',socialLinkName)
+            .click()
+    }
 
+    UserNameInAddSocialLink(userName2){
+        cy.get('[id=social-link-config-input-displayedText]')
+            .clear()
+            .type(userName2)
+    }
+
+    EnableSaveButton(){
+        cy.get('[id=save-button]')
+            .should('be.enabled')
+            .click()
+    }
+
+    DisabledSaveButoon(){
+        cy.get('[id=save-button]')
+            .should('not.be.selected')
+    }
+
+    CheckSocialLinkAfterAdded(idOfAddedSocialLink,TextOfAddedSocialLink){
+        cy.get(idOfAddedSocialLink)
+            .should('have.text',TextOfAddedSocialLink)
+    }
     //----------------------------------------IMAGES----------------------------------------// 
     //----------------------------------------Test #4----------------------------------------// 
 
-    //TODO: CHECK THE  ID HERE
+    //TODO: CHECK HOW TO UPLOAD AN IMG HERE
     ProfilePicture() {
-        cy.get('[id=sum-menuNobody]')
+        cy.get('[class=add-more]')
             .should('be.visible')
             .click()
     }
     
-    
-    //TODO: CHECK THE  ID HERE
+    //TODO: CHECK HOW TO UPLOAD AN IMG HERE
     BannerImage(){
-        cy.get('[class=title]')
+        cy.get('[class=add-more2]')
             .should('be.visible')
             .click()
     }
 
     //----------------------------------------PROFILE CATEGORY----------------------------------------// 
     
-    NSFW() {
+    NSFW(){
         cy.get('[id=nsfw-profile-settings]')
-            .should('be.visible')
-            .click()
+            .click()    
     }
+
+    EnabledNSFW() {
+        cy.get('[id=nsfw-profile-settings]')
+            .should('be.enabled')
+    }
+
+    DisabledNSFW() {
+        cy.get('[id=nsfw-profile-settings]')
+            .should('not.be.selected')
+    }
+    
+    SettingsChangedSuccessfully(){
+        cy.get('[class=right]')
+            .should('have.text',"settings changed successfully")
+    }
+
 
     //----------------------------------------ADVANCED----------------------------------------// 
     
@@ -63,23 +114,19 @@ class ProfileObjects {
             .click()
     }
 
-    ContentVisibility() {
-        cy.get('[id=visibility-profile-settings]')
-            .should('be.visible')
-            .click()
-    }    
-
-
-    ActiveInCommunitiesVisibility(){
-        cy.get('[id=active-profile-settings]')
-            .should('be.visible')
-           .click()
+    EnabledAllowPeopletoFollowYou() {
+        cy.get('[id=allow-profile-settings]')
+            .should('be.enabled')
     }
-
-    ProfileModerationPage(){
-        cy.get('[id=moderation-profile-settings]')
-            .should('be.visible')
-            .click()        
+    
+    DisabledAllowPeopletoFollowYou() {
+        cy.get('[id=allow-profile-settings]')
+            .should('not.be.selected')
+    }
+    
+    SettingsChangedSuccessfully(){
+        cy.get('[class=right]')
+            .should('have.text',"settings changed successfully")
     }
 
 }

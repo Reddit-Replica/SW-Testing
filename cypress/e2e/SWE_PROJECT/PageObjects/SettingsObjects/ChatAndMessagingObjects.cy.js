@@ -1,3 +1,4 @@
+/*
 class ChatAndMessagingObjects {
     
     navigate(){
@@ -92,3 +93,5 @@ class ChatAndMessagingObjects {
 }
 
 export default ChatAndMessagingObjects
+
+*/

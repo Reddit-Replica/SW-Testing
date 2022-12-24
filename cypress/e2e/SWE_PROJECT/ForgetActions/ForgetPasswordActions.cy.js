@@ -4,7 +4,7 @@ import ForgetPasswordObjects from "/home/karimmahmoud/Desktop/CypressAutomation/
 describe('Reset Password Page Tests', function () {
     
 //Test Case 1
-/*
+
     //NOTE: CHECK THE EFFECT OF IT
     it('Forget Password', () =>  {    
 
@@ -32,9 +32,9 @@ describe('Reset Password Page Tests', function () {
         forgetPassword.EnterUserName('adasdwdx')
         forgetPassword.UrlNotEqualChecker(Cypress.env('CYPRESSBASEURL') +'/forgetPasswordpage')
     })
-  */
+  
      
-    /*
+    
     //Test Case 3
     //email is : 1231565456@gmail.com which is invalid one
     it('Write Invalid Email - should appear error message1', () =>  {    
@@ -64,7 +64,7 @@ describe('Reset Password Page Tests', function () {
         forgetPassword.NotInValidMessage()
     
     })
-    */
+    
     //Test Case 7
     //email is : as1231565456a which is InValid one
     it('Write Invalid Email - should appear error message3', () =>  {    

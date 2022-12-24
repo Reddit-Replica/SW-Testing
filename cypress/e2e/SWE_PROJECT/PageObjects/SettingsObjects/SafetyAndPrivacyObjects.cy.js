@@ -1,17 +1,66 @@
 class SafetyAndPrivacyObjects{
 
-    //TODO: CHECK ALL IDS OF THIS PAGE OBJECTS
-    navigate() {
-        cy.visit(Cypress.env('CYPRESSBASEURL') +'/settings/privacy')
-    }
     //----------------------------------------Safety Section----------------------------------------//
 
     //----------------------------------------Test #1----------------------------------------//     
+    SafetyAndPrivacyButton(){
+        cy.get('[id=privacy-settings]')
+            .click()
+    }
+
     PrivacyAndSecurityFAQs(){
-        cy.get('#app > div > div > div > div:nth-child(2) > div > div > div > p > span > a')
+        cy.get('[id=privacy-settings]')
             .should('be.visible')
             .click()        
     }
+
+
+    BlockANewUser(blockedusername){
+        cy.get('[id=block-new-user-input]')
+            .clear()
+            .type(blockedusername)
+    }
+
+    ClickOnAddToBLockAUser(){
+        cy.get('[id=Add-block-new-user-button]')
+            .click()
+    }
+
+    ErrorMessage(){
+        cy.get('[class=right]')
+            .should('have.text',"An error has occured. Please try again later")
+    }
+
+    NowBLocked(userName){
+        cy.get('[class=right]')
+            .should('have.text',userName+" is now blocked")
+    }
+
+    RemovedABlockedUser(){
+        cy.get('[id=remove-undefined]')
+            .click()
+    }
+
+    NowUnBLocked(userName2){
+        cy.get('[class=right]')
+            .should('have.text',userName2+' is now unblocked')
+    }
+
+    SearchForABlockedUser(userName3){
+        cy.get('[id=header-search]')
+            .clear()
+            .type(userName3)
+    }
+
+    CLickOnSearchIcon(){
+        cy.get('[id=header-search-icon]')
+            .click()
+    }
+
+    
+    //Need to check the messagge that will appear ==> if success or fails to block a user
+
+    /*
 
     //----------------------------------------Test #2----------------------------------------//     
     PeopleYouHaveBlocked(){
@@ -86,6 +135,8 @@ class SafetyAndPrivacyObjects{
             .should('be.visible')
             .click()        
     }
+    
+    */
 
 }
 export default SafetyAndPrivacyObjects

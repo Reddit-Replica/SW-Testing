@@ -1,21 +1,48 @@
 /// <reference types="cypress" />
 
 import FeedSettingsObjects from "../PageObjects/SettingsObjects/FeedSettingsObjects.cy"
+import EmailsObjects from "../PageObjects/SettingsObjects/EmailsObjects.cy"
+
+const Emails = new EmailsObjects()
+const FeedSettings = new FeedSettingsObjects()
+        
+beforeEach({scrollBehavior:false},() => {
+    Emails.navigate()  
+    Emails.enterUsername('karim22') 
+    Emails.enterPassword('Karim@0107228700')     
+    Emails.submit() 
+    Emails.TopRightBar()
+    Emails.UserSettings()
+        
+})
 
 describe('Feed Settings Tab Tests', function () {
     
+    //CHECK IT LATER
     //Test Case 1
-    it('Adult content', () =>  {    
-        
-        const FeedSettings = new FeedSettingsObjects()
-        FeedSettings.navigate()
-
+    it('Adult content',{scrollBehavior:false}, () =>  {    
+        FeedSettings.FeedSettingsButton()
+        FeedSettings.DisableAdultContent()
         FeedSettings.AdultContent()
-
+        FeedSettings.SettingsChangedSuccessfully()
+        FeedSettings.EnableAdultContent()
+        FeedSettings.SettingsChangedSuccessfully()
 
     })
-
+    
+    //CHECK IT LATER
     //Test Case 2
+    it('Autoplay media', {scrollBehavior:false},() =>  {    
+        FeedSettings.FeedSettingsButton()
+        FeedSettings.EnableAutoplayMedia()
+        FeedSettings.AutoplayMedia()
+        FeedSettings.SettingsChangedSuccessfully()
+        FeedSettings.DisableAutoplayMedia()
+        FeedSettings.SettingsChangedSuccessfully()
+    })
+    
+    /*
+        //Test Case 2
     it('Safe browsing mode', () =>  {    
 
         const FeedSettings = new FeedSettingsObjects()
@@ -41,16 +68,7 @@ describe('Feed Settings Tab Tests', function () {
 
         FeedSettings.EnableLiveRecommendations()
     })
-    
-    //Test Case 5
-    it('Autoplay media', () =>  {    
 
-        const FeedSettings = new FeedSettingsObjects()
-        FeedSettings.navigate()
-
-        FeedSettings.AutoplayMedia()
-    })
-    
     //Test Case 6
     it('Reduce Animations', () =>  {    
 
@@ -104,5 +122,6 @@ describe('Feed Settings Tab Tests', function () {
     
         FeedSettings.DefaultToMarkdown()
     })
-    
+  
+    */
 })

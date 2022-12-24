@@ -7,75 +7,118 @@ class AccountObjects {
     //----------------------------------------ACCOUNT PREFERENCES----------------------------------------// 
     EmailAddress(){
         cy.get('[id=change]')
+            .first()
             .should('be.visible')
             .click()
     }
+
+    ChangePassword(){
+        cy.get('[id=change]')
+            .last()
+            .click()
+    }
+
+    CurrentPassword(newPassword){
+        cy.get('[type=password]')
+            .clear()
+            .type(newPassword)
+    }
+
+    NewMail(newMail2){
+        cy.get('[type=email]')
+            .clear()
+            .type(newMail2)
+    }
+
+    DisabledSaveEmail(){
+        cy.get('[id=saveEmailid]')
+            .should('not.be.selected')
+    }
+
+    SaveEmail(){
+        cy.get('[id=saveEmailid]')
+            .click()
+    }
+
+    EmailAddressAfterChanged(newMail3){
+        cy.get('[class=p-title-description]')
+            //.should('have.text',newMail3)
+    }
+
+    EnabledSaveEmail(){
+        cy.get('[id=saveEmailid]')
+            .should('be.enabled')
+    }
+    
+    SaveEmail(){
+        cy.get('[id=saveEmailid]')
+            .click()
+    }
+
+    UpdateYourEmailTitle(){
+        cy.get('[class=change-email-header]')
+            .should('have.text',"Update your email")
+    }
+
+
+
+    InvalidMessage(){
+        cy.get('[class=invalid]')
+            .should('have.text'," Password must be at least 8 characters long ")
+    }
+
+
+    InCorrectPasswordMessage(){
+        cy.get('[class=error]')
+            .first()
+            .should('have.text',"incorrect password")
+    }
+
+    PasswordMustMatchMessage(){
+        cy.get('[class=error]')
+            .last()
+            .should('have.text',"Password must match")
+    }
+
 
     //TODO: CHECK THE ID OF IT LATER
-    Gender() {
-        cy.get('[id=gender-menu]')
-            .should('be.visible')
-            .click()
+    Gender(genderType2) {
+        cy.get('[class=span-blue]')
+            //.should('be.visible') 
+            .click({force:true})
+            .select(genderType2)
     }
 
-    DisplayLanguageBeta() {
-        cy.get('[id=language]')
-            .should('be.visible')
-            .click()
+    CheckGenderAfterChanged(genderType3){
+        cy.get('[class=span-blue]')
+            .should('have.text',genderType3)
     }
 
-    Country() {
-        cy.get('[id=scountry]')
-            .should('be.visible')
-            .click()
+    Country(indexOfCountry,countryName) {
+        cy.get('[id=select1]')
+            .select(indexOfCountry)
     }
     
     //----------------------------------------CONNECTED ACCOUNTS----------------------------------------// 
 
-    ConnectToTwitter(){
-        cy.get('[id=twitter]')
-            .should('be.visible')
-            .click()
-    }
-
-    ConnectToApple() {
+    ConnectToFaceBook(){
         cy.get('[id=apple]')
+            .first()
             .should('be.visible')
             .click()
     }
 
     ConnectedToGoogle() {
-        cy.get('[id=google]')
+        cy.get('[id=apple]')
+            .last()
             .should('be.visible')
             .click()
     }
-
-    NoBodyPrivateMessages() {
-        cy.get('[id=sum-menuNobody]')
-            .should('be.visible')
-            .click()
-    }    
-
-    //----------------------------------------BETA TESTS----------------------------------------// 
-
-    OptIntoBetaTests(){
-        cy.get('[id=sb-2]')
-            .should('not.be.visible')
-            .click()
-        }
-        
-    OptOutOfTheRedesign(){
-        //TODO: [class=title] ==>need to be changed later
-        cy.get('[id=sb-1]')
-            .should('not.be.visible')
-            .click()
-        }
-
-    //----------------------------------------DELETE ACCOUNT----------------------------------------//     
-    InviteSomeoneToChat(){
+ 
+    DeleteAccount(){
         cy.get('[id=delete-account]')
-            .should('be.visible')
-            .click()        
+            .should('have.text',"Delete Account")
+            .click()
     }
     
 }

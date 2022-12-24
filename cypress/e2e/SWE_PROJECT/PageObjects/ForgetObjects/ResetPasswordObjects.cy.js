@@ -6,7 +6,7 @@ class ResetPasswordObjects {
     
     TitleChecker(){
         cy.title()
-            .should('eq' , 'reddit.com: Reset your password')
+            .should('eq' , 'Reddit')
     }
 
     NewPassword(password){
@@ -32,7 +32,7 @@ class ResetPasswordObjects {
     
     ClickOnSetPasswordButton(){
         cy.get('[class=AnimatedForm__submitButton]')
-            .should('be.visible')
+            //.should('be.visible')
             .click()
     }
 

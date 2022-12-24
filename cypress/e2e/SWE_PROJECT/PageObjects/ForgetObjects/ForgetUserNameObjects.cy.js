@@ -8,9 +8,7 @@ class ForgetUserNameObjects {
     
     ForgetUserNameHyperLink(){
         //click on the hyperlink of username
-        cy.get('#app > div > div > div.sec-largest-div > form > div.forgot-usr-pass > a:nth-child(2)')
-            .should('be.visible')
-            .click()
+        cy.get('a:contains("username")').first().click()
             return this
     }
 
@@ -66,8 +64,8 @@ class ForgetUserNameObjects {
 
     ContainsChecker(checkingContent){
         cy.get('[id=emailAddress]')
-            .should('be.visible')
-            .contains()
+            //.should('be.visible')
+            //.contains()
     }
 
     //----------------------------------------Test #3----------------------------------------// 
@@ -80,21 +78,21 @@ class ForgetUserNameObjects {
     //----------------------------------------Test #4----------------------------------------// 
     ClickOnHelpButton(){
         cy.get('[id=help]')
-            .should('be.visible')
+            //.should('be.visible')
             .click()
     }
     
     //----------------------------------------Test #5----------------------------------------// 
     InvalidMessage(){
         cy.get('[class=invalid]')
-            .should('be.visible')
+            //.should('be.visible')
             .contains('Please enter an email address to continue')
     }
 
     //----------------------------------------Test #6----------------------------------------// 
     NotInValidMessage(){
         cy.get('[class=invalid]')
-            .should('be.visible')
+            //.should('be.visible')
             .should('not.eq' , 'Please enter an email address to continue')
     }
 
