@@ -1,4 +1,4 @@
-# SW-Testing
+# Mobile-Testing
 This Branch contains all files about testing the mobile application.
 
 ## Contributors
