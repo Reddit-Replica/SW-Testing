@@ -1,0 +1,390 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 14,
+    "passes": 5,
+    "pending": 0,
+    "failures": 9,
+    "start": "2022-11-12T21:41:14.915Z",
+    "end": "2022-11-12T21:42:13.012Z",
+    "duration": 58097,
+    "testsRegistered": 14,
+    "passPercent": 35.714285714285715,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a7ff145c-a95e-4429-93cc-27c338422b2d",
+      "title": "",
+      "fullFile": "cypress/e2e/SWE_PROJECT/SignUpActions/sign_up.cy.js",
+      "file": "cypress/e2e/SWE_PROJECT/SignUpActions/sign_up.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d1b6ed92-cd73-44bd-b6a9-e22feba368df",
+          "title": "Test Sign up first form",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Press \"CONTINUE\" button with empty email",
+              "fullTitle": "Test Sign up first form Press \"CONTINUE\" button with empty email",
+              "timedOut": null,
+              "duration": 10644,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.continue(); //signUp.emailErrMsg('Looks like you've been doing that a lot. Take a break for 32 minutes before trying again.')\nsignUp.goSecondForm();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.all-div`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.all-div`, but never found it.\n    at signUpObjects.goSecondForm (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SignUpObjects/signUpObjects.js:57:13)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SignUpActions/sign_up.cy.js:19:11)",
+                "diff": null
+              },
+              "uuid": "9fd1d034-62f7-4853-b0ef-8f35bfd05cff",
+              "parentUUID": "d1b6ed92-cd73-44bd-b6a9-e22feba368df",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Press \"CONTINUE\" button with empty email and with valid username and strong password then submit",
+              "fullTitle": "Test Sign up first form Press \"CONTINUE\" button with empty email and with valid username and strong password then submit",
+              "timedOut": null,
+              "duration": 922,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.continue(); //signUp.goSecondForm()\nsignUp.enterUserName('Samaa_hazem22fxggf');\nsignUp.enterPassword('asdfghje123');\nsignUp.signUpBotton();",
+              "err": {
+                "message": "TypeError: signUp.signUpBotton is not a function",
+                "estack": "TypeError: signUp.signUpBotton is not a function\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SignUpActions/sign_up.cy.js:29:11)",
+                "diff": null
+              },
+              "uuid": "0ac2ebc8-730c-44ce-be66-27082463f9d7",
+              "parentUUID": "d1b6ed92-cd73-44bd-b6a9-e22feba368df",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Without pressing \"CONTINUE\" with invalid email",
+              "fullTitle": "Test Sign up first form Without pressing \"CONTINUE\" with invalid email",
+              "timedOut": null,
+              "duration": 615,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.enterEmail('hello'); //signUp.continue() \nsignUp.emailErrMsg('Please fix your email to continue');\nsignUp.goNotSecondForm();",
+              "err": {},
+              "uuid": "f7ef5c6b-6e6f-45ce-b240-616d2747e4c9",
+              "parentUUID": "d1b6ed92-cd73-44bd-b6a9-e22feba368df",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Press \"CONTINUE\" with invalid email",
+              "fullTitle": "Test Sign up first form Press \"CONTINUE\" with invalid email",
+              "timedOut": null,
+              "duration": 4772,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.enterEmail('hello'); //signUp.emailErrMsg('Please fix your email to continue')\nsignUp.continue();\nsignUp.emailErrMsg('That email is invalid');\nsignUp.goNotSecondForm();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<div.username-error-message>' to have text 'That email is invalid', but the text was 'Email is already taken'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<div.username-error-message>' to have text 'That email is invalid', but the text was 'Email is already taken'\n    at signUpObjects.emailErrMsg (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SignUpObjects/signUpObjects.js:34:13)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SignUpActions/sign_up.cy.js:57:11)",
+                "diff": "- 'Email is already taken'\n+ 'That email is invalid'\n"
+              },
+              "uuid": "d30bb212-f744-4f1b-b284-9f0689ab6305",
+              "parentUUID": "d1b6ed92-cd73-44bd-b6a9-e22feba368df",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Press \"CONTINUE\" with invalid email (with .com only)",
+              "fullTitle": "Test Sign up first form Press \"CONTINUE\" with invalid email (with .com only)",
+              "timedOut": null,
+              "duration": 5608,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.enterEmail('hello.com');\nsignUp.continue();\nsignUp.emailErrMsg('That email is invalid');\nsignUp.goNotSecondForm();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<div.username-error-message>' to have text 'That email is invalid', but the text was 'Email is already taken'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<div.username-error-message>' to have text 'That email is invalid', but the text was 'Email is already taken'\n    at signUpObjects.emailErrMsg (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SignUpObjects/signUpObjects.js:34:13)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SignUpActions/sign_up.cy.js:66:11)",
+                "diff": "- 'Email is already taken'\n+ 'That email is invalid'\n"
+              },
+              "uuid": "4680dec9-50e0-4bb4-acb5-2abb79c59830",
+              "parentUUID": "d1b6ed92-cd73-44bd-b6a9-e22feba368df",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Press \"CONTINUE\" with invalid email (with @ only)",
+              "fullTitle": "Test Sign up first form Press \"CONTINUE\" with invalid email (with @ only)",
+              "timedOut": null,
+              "duration": 4889,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.enterEmail('hello.com');\nsignUp.continue();\nsignUp.emailErrMsg('That email is invalid');\nsignUp.goNotSecondForm();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<div.username-error-message>' to have text 'That email is invalid', but the text was 'Email is already taken'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<div.username-error-message>' to have text 'That email is invalid', but the text was 'Email is already taken'\n    at signUpObjects.emailErrMsg (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SignUpObjects/signUpObjects.js:34:13)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SignUpActions/sign_up.cy.js:75:11)",
+                "diff": "- 'Email is already taken'\n+ 'That email is invalid'\n"
+              },
+              "uuid": "b90cfbdd-7ced-4098-8f2c-5a629dae8f62",
+              "parentUUID": "d1b6ed92-cd73-44bd-b6a9-e22feba368df",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Press \"CONTINUE\" with invalid email (with @ and .com)",
+              "fullTitle": "Test Sign up first form Press \"CONTINUE\" with invalid email (with @ and .com)",
+              "timedOut": null,
+              "duration": 4893,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.enterEmail('hello.com');\nsignUp.continue();\nsignUp.emailErrMsg('That email is invalid');\nsignUp.goNotSecondForm();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<div.username-error-message>' to have text 'That email is invalid', but the text was 'Email is already taken'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<div.username-error-message>' to have text 'That email is invalid', but the text was 'Email is already taken'\n    at signUpObjects.emailErrMsg (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SignUpObjects/signUpObjects.js:34:13)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SignUpActions/sign_up.cy.js:84:11)",
+                "diff": "- 'Email is already taken'\n+ 'That email is invalid'\n"
+              },
+              "uuid": "5f67ce72-867b-44fb-b785-6f3fc7c9ae7d",
+              "parentUUID": "d1b6ed92-cd73-44bd-b6a9-e22feba368df",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Press \"CONTINUE\" with valid non-existing email",
+              "fullTitle": "Test Sign up first form Press \"CONTINUE\" with valid non-existing email",
+              "timedOut": null,
+              "duration": 5154,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.enterEmail('hello.dfghj@gmail.com');\nsignUp.continue(); //.emailErrMsg('That email is invalid')\nsignUp.goSecondForm();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.all-div`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.all-div`, but never found it.\n    at signUpObjects.goSecondForm (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SignUpObjects/signUpObjects.js:57:13)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SignUpActions/sign_up.cy.js:95:11)",
+                "diff": null
+              },
+              "uuid": "0289a3f5-f49b-4194-a4cd-d96a695232c3",
+              "parentUUID": "d1b6ed92-cd73-44bd-b6a9-e22feba368df",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Entering a valid email without pressing \"CONTINUE\"",
+              "fullTitle": "Test Sign up first form Entering a valid email without pressing \"CONTINUE\"",
+              "timedOut": null,
+              "duration": 1252,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.enterEmail('sama.hazem22@gmail.com');\nsignUp.goNotSecondForm();",
+              "err": {},
+              "uuid": "1b832d86-c3af-478f-9613-31b47777104f",
+              "parentUUID": "d1b6ed92-cd73-44bd-b6a9-e22feba368df",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Entering a valid email and press the \"CONTINUE\" ",
+              "fullTitle": "Test Sign up first form Entering a valid email and press the \"CONTINUE\" ",
+              "timedOut": null,
+              "duration": 5254,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.enterEmail('sama.hazem22@gmail.com');\nsignUp.continue();\nsignUp.goSecondForm();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.all-div`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.all-div`, but never found it.\n    at signUpObjects.goSecondForm (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SignUpObjects/signUpObjects.js:57:13)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SignUpActions/sign_up.cy.js:118:11)",
+                "diff": null
+              },
+              "uuid": "88861aa1-1ccd-4785-9d31-94b9b4435f27",
+              "parentUUID": "d1b6ed92-cd73-44bd-b6a9-e22feba368df",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Entering a valid email of an existing account",
+              "fullTitle": "Test Sign up first form Entering a valid email of an existing account",
+              "timedOut": null,
+              "duration": 7324,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.enterEmail('sama.hazem22@gmail.com');\nsignUp.continue();\nsignUp.goSecondForm();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.all-div`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.all-div`, but never found it.\n    at signUpObjects.goSecondForm (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SignUpObjects/signUpObjects.js:57:13)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SignUpActions/sign_up.cy.js:125:11)",
+                "diff": null
+              },
+              "uuid": "0abf8f7f-455e-4b56-964c-d7987d23bb25",
+              "parentUUID": "d1b6ed92-cd73-44bd-b6a9-e22feba368df",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Click the \"LOG IN\" will load the Login page",
+              "fullTitle": "Test Sign up first form Click the \"LOG IN\" will load the Login page",
+              "timedOut": null,
+              "duration": 923,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.loginPage();\nsignUp.urlChecker('http://read-it.francecentral.cloudapp.azure.com/login');",
+              "err": {},
+              "uuid": "c4b99efb-a19e-4e13-b080-8a5a1e27ed46",
+              "parentUUID": "d1b6ed92-cd73-44bd-b6a9-e22feba368df",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Clicking on the \"User Agreement\" will load the (User Agreement page)",
+              "fullTitle": "Test Sign up first form Clicking on the \"User Agreement\" will load the (User Agreement page)",
+              "timedOut": null,
+              "duration": 2529,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.userAgreementPage();\nsignUp.urlChecker('https://www.redditinc.com/policies/user-agreement');",
+              "err": {},
+              "uuid": "705f333f-3841-49d8-a392-c09e33f7036f",
+              "parentUUID": "d1b6ed92-cd73-44bd-b6a9-e22feba368df",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Clicking on the \"Privacy Policy\" will load the (Privacy Policy)",
+              "fullTitle": "Test Sign up first form Clicking on the \"Privacy Policy\" will load the (Privacy Policy)",
+              "timedOut": null,
+              "duration": 1586,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const signUp = new _signUpObjects.default();\nsignUp.privacyPolicyPage();\nsignUp.urlChecker('https://www.reddit.com/policies/privacy-policy');",
+              "err": {},
+              "uuid": "f3b4556a-3aea-4b7c-999a-2cd5776654b4",
+              "parentUUID": "d1b6ed92-cd73-44bd-b6a9-e22feba368df",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f7ef5c6b-6e6f-45ce-b240-616d2747e4c9",
+            "1b832d86-c3af-478f-9613-31b47777104f",
+            "c4b99efb-a19e-4e13-b080-8a5a1e27ed46",
+            "705f333f-3841-49d8-a392-c09e33f7036f",
+            "f3b4556a-3aea-4b7c-999a-2cd5776654b4"
+          ],
+          "failures": [
+            "9fd1d034-62f7-4853-b0ef-8f35bfd05cff",
+            "0ac2ebc8-730c-44ce-be66-27082463f9d7",
+            "d30bb212-f744-4f1b-b284-9f0689ab6305",
+            "4680dec9-50e0-4bb4-acb5-2abb79c59830",
+            "b90cfbdd-7ced-4098-8f2c-5a629dae8f62",
+            "5f67ce72-867b-44fb-b785-6f3fc7c9ae7d",
+            "0289a3f5-f49b-4194-a4cd-d96a695232c3",
+            "88861aa1-1ccd-4785-9d31-94b9b4435f27",
+            "0abf8f7f-455e-4b56-964c-d7987d23bb25"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 56365,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

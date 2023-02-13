@@ -1,0 +1,386 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 13,
+    "passes": 0,
+    "pending": 0,
+    "failures": 13,
+    "start": "2022-11-12T21:14:54.315Z",
+    "end": "2022-11-12T21:15:04.012Z",
+    "duration": 9697,
+    "testsRegistered": 13,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "873c9700-d825-4655-8d1b-82712a8d6bc3",
+      "title": "",
+      "fullFile": "cypress/e2e/SWE_PROJECT/SettingsActions/EmailsActions.cy.js",
+      "file": "cypress/e2e/SWE_PROJECT/SettingsActions/EmailsActions.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9e635790-edca-4822-be96-555f0c3b9e88",
+          "title": "Emails Tab Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Inbox messages",
+              "fullTitle": "Emails Tab Tests Inbox messages",
+              "timedOut": null,
+              "duration": 710,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const Emails = new _EmailsObjects.default();\nEmails.navigate();\nEmails.InboxMessages();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/emails\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/emails\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at EmailsObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SettingsObjects/EmailsObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SettingsActions/EmailsActions.cy.js:13:15)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "84b13ed5-e74e-4e96-b798-4cc9add1294e",
+              "parentUUID": "9e635790-edca-4822-be96-555f0c3b9e88",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Chat requests",
+              "fullTitle": "Emails Tab Tests Chat requests",
+              "timedOut": null,
+              "duration": 658,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const Emails = new _EmailsObjects.default();\nEmails.navigate();\nEmails.ChatRequests();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/emails\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/emails\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at EmailsObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SettingsObjects/EmailsObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SettingsActions/EmailsActions.cy.js:22:15)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "b277cd35-d079-4c39-b6de-5537c83b7c1b",
+              "parentUUID": "9e635790-edca-4822-be96-555f0c3b9e88",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "New user welcome",
+              "fullTitle": "Emails Tab Tests New user welcome",
+              "timedOut": null,
+              "duration": 936,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const Emails = new _EmailsObjects.default();\nEmails.navigate();\nEmails.NewUserWelcome();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/emails\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/emails\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at EmailsObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SettingsObjects/EmailsObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SettingsActions/EmailsActions.cy.js:32:15)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "6de1e593-a76f-4615-b692-9bac7c986711",
+              "parentUUID": "9e635790-edca-4822-be96-555f0c3b9e88",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Comments on your posts",
+              "fullTitle": "Emails Tab Tests Comments on your posts",
+              "timedOut": null,
+              "duration": 661,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const Emails = new _EmailsObjects.default();\nEmails.navigate();\nEmails.CommentsOnYourPosts();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/emails\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/emails\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at EmailsObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SettingsObjects/EmailsObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SettingsActions/EmailsActions.cy.js:41:15)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "1e49f17a-cb0d-4a62-a0cb-d7fdf1811e15",
+              "parentUUID": "9e635790-edca-4822-be96-555f0c3b9e88",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Replies to your comments",
+              "fullTitle": "Emails Tab Tests Replies to your comments",
+              "timedOut": null,
+              "duration": 663,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const Emails = new _EmailsObjects.default();\nEmails.navigate();\nEmails.RepliesToYourComments();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/emails\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/emails\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at EmailsObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SettingsObjects/EmailsObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SettingsActions/EmailsActions.cy.js:50:15)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "a3b5c37e-e5df-4f88-b529-978c69848eb6",
+              "parentUUID": "9e635790-edca-4822-be96-555f0c3b9e88",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Upvotes on your posts",
+              "fullTitle": "Emails Tab Tests Upvotes on your posts",
+              "timedOut": null,
+              "duration": 684,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const Emails = new _EmailsObjects.default();\nEmails.navigate();\nEmails.UpvotesOnYourPosts();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/emails\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/emails\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at EmailsObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SettingsObjects/EmailsObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SettingsActions/EmailsActions.cy.js:59:15)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "bc7514f4-2724-43ed-982f-2bd56de7fcf4",
+              "parentUUID": "9e635790-edca-4822-be96-555f0c3b9e88",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Upvotes on your comments",
+              "fullTitle": "Emails Tab Tests Upvotes on your comments",
+              "timedOut": null,
+              "duration": 685,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const Emails = new _EmailsObjects.default();\nEmails.navigate();\nEmails.UpvotesOnYourComments();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/emails\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/emails\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at EmailsObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SettingsObjects/EmailsObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SettingsActions/EmailsActions.cy.js:68:15)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "d15387d6-adab-49d8-b36a-9aa1a1cce746",
+              "parentUUID": "9e635790-edca-4822-be96-555f0c3b9e88",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Username mentions",
+              "fullTitle": "Emails Tab Tests Username mentions",
+              "timedOut": null,
+              "duration": 693,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const Emails = new _EmailsObjects.default();\nEmails.navigate();\nEmails.UsernameMentions();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/emails\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/emails\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at EmailsObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SettingsObjects/EmailsObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SettingsActions/EmailsActions.cy.js:77:15)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "b41f34e3-3a28-42b0-97f1-c57ad916307e",
+              "parentUUID": "9e635790-edca-4822-be96-555f0c3b9e88",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "New followers",
+              "fullTitle": "Emails Tab Tests New followers",
+              "timedOut": null,
+              "duration": 706,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const Emails = new _EmailsObjects.default();\nEmails.navigate();\nEmails.NewFollowers();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/emails\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/emails\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at EmailsObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SettingsObjects/EmailsObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SettingsActions/EmailsActions.cy.js:86:15)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "596aa0d9-3659-40c8-93b7-0a3319280714",
+              "parentUUID": "9e635790-edca-4822-be96-555f0c3b9e88",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Daily Digest",
+              "fullTitle": "Emails Tab Tests Daily Digest",
+              "timedOut": null,
+              "duration": 667,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const Emails = new _EmailsObjects.default();\nEmails.navigate();\nEmails.DailyDigest();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/emails\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/emails\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at EmailsObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SettingsObjects/EmailsObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SettingsActions/EmailsActions.cy.js:96:15)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "a61c8aa7-638f-470d-b12d-c94e980e3b37",
+              "parentUUID": "9e635790-edca-4822-be96-555f0c3b9e88",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Weekly Recap",
+              "fullTitle": "Emails Tab Tests Weekly Recap",
+              "timedOut": null,
+              "duration": 813,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const Emails = new _EmailsObjects.default();\nEmails.navigate();\nEmails.WeeklyRecap();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/emails\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/emails\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at EmailsObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SettingsObjects/EmailsObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SettingsActions/EmailsActions.cy.js:105:15)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "e3c3bc9d-d509-4508-87c5-55461ca4f233",
+              "parentUUID": "9e635790-edca-4822-be96-555f0c3b9e88",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Community Discovery",
+              "fullTitle": "Emails Tab Tests Community Discovery",
+              "timedOut": null,
+              "duration": 901,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const Emails = new _EmailsObjects.default();\nEmails.navigate();\nEmails.CommunityDiscovery();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/emails\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/emails\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at EmailsObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SettingsObjects/EmailsObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SettingsActions/EmailsActions.cy.js:114:15)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "6ec1334b-33fb-4267-9ecc-40630510899d",
+              "parentUUID": "9e635790-edca-4822-be96-555f0c3b9e88",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Unsubscribe from all emails",
+              "fullTitle": "Emails Tab Tests Unsubscribe from all emails",
+              "timedOut": null,
+              "duration": 702,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const Emails = new _EmailsObjects.default();\nEmails.navigate();\nEmails.UnsubscribeFromAllEmails();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/emails\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://localhost/settings/emails\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 127.0.0.1:80\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142341:82)\n    at visitFailedByErr (http://localhost:44893/__cypress/runner/cypress_runner.js:141629:12)\n    at <unknown> (http://localhost:44893/__cypress/runner/cypress_runner.js:142340:11)\n    at tryCatcher (http://localhost:44893/__cypress/runner/cypress_runner.js:11318:23)\n    at Promise._settlePromiseFromHandler (http://localhost:44893/__cypress/runner/cypress_runner.js:9253:31)\n    at Promise._settlePromise (http://localhost:44893/__cypress/runner/cypress_runner.js:9310:18)\n    at Promise._settlePromise0 (http://localhost:44893/__cypress/runner/cypress_runner.js:9355:10)\n    at Promise._settlePromises (http://localhost:44893/__cypress/runner/cypress_runner.js:9431:18)\n    at _drainQueueStep (http://localhost:44893/__cypress/runner/cypress_runner.js:6025:12)\n    at _drainQueue (http://localhost:44893/__cypress/runner/cypress_runner.js:6018:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:6034:5)\n    at Async.drainQueues (http://localhost:44893/__cypress/runner/cypress_runner.js:5904:14)\nFrom Your Spec Code:\n    at EmailsObjects.navigate (webpack:///./cypress/e2e/SWE_PROJECT/PageObjects/SettingsObjects/EmailsObjects.cy.js:4:11)\n    at Context.eval (webpack:///./cypress/e2e/SWE_PROJECT/SettingsActions/EmailsActions.cy.js:123:15)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 127.0.0.1:80\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)",
+                "diff": null
+              },
+              "uuid": "116996e5-5ce4-4af9-9161-2043c2630a47",
+              "parentUUID": "9e635790-edca-4822-be96-555f0c3b9e88",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "84b13ed5-e74e-4e96-b798-4cc9add1294e",
+            "b277cd35-d079-4c39-b6de-5537c83b7c1b",
+            "6de1e593-a76f-4615-b692-9bac7c986711",
+            "1e49f17a-cb0d-4a62-a0cb-d7fdf1811e15",
+            "a3b5c37e-e5df-4f88-b529-978c69848eb6",
+            "bc7514f4-2724-43ed-982f-2bd56de7fcf4",
+            "d15387d6-adab-49d8-b36a-9aa1a1cce746",
+            "b41f34e3-3a28-42b0-97f1-c57ad916307e",
+            "596aa0d9-3659-40c8-93b7-0a3319280714",
+            "a61c8aa7-638f-470d-b12d-c94e980e3b37",
+            "e3c3bc9d-d509-4508-87c5-55461ca4f233",
+            "6ec1334b-33fb-4267-9ecc-40630510899d",
+            "116996e5-5ce4-4af9-9161-2043c2630a47"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 9479,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

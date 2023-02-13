@@ -1,0 +1,18 @@
+{
+    "UsernameLogin": "karim10",
+    "PasswordLogin": "karim10",
+    "GoToCommunity": "[id=top-community-link2-1]",
+    "TotalLast24Hour": "[id=top-community-link2-1]",
+    "TotalLast7Days": "[id=top-community-link2-1]",
+    "TotalLastMonth": "[id=top-community-link2-1]",
+    "GetDateInTheDayTable": "[id=top-community-link2-1]",
+    "GetMembersJoinedInTheDayTable": "[id=top-community-link2-1]",
+    "GetDayOfTheWeekInTheDayTable": "[id=top-community-link2-1]",
+    "GetMembersJoinedInTheDayOfWeekTable": "[id=top-community-link2-1]",
+    "GetDayOfTheWeekInTheDayTable2": "[id=top-community-link2-1]",
+    "GetMembersJoinedInTheDayOfWeekTable2": "[id=top-community-link2-1]",
+    "GetMonthInTheDayTable": "[id=top-community-link2-1]",
+    "GetMembersJoinedInTheMonthTable": "[id=top-community-link2-1]",
+    "CommName" : "footbally"
+    
+}

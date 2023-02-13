@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "cypress": "^10.11.0"
+  },
+  "scripts": {
+    "openCypress": "cypress open",
+    "test": "node_modules\\.bin\\cypress run",
+    "runtests": "npm run test --",
+    "runCypressInTerminal": "cypress run",
+    "runCypressInBrowser": "cypress run --headed",
+    "runSpecificCase": "cypress run --spec ",
+    "runChrome": "cypress run --browser chrome",
+    "runEdge": "cypress run --browser edge"
+  }
+}

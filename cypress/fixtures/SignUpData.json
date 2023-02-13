@@ -1,0 +1,18 @@
+{
+    "InvalidEmail1": "hello",
+    "InvalidEmail2": "hello.com",
+    "InvalidEmail3": "hello.dfghj@gmail.com",
+    "ValidEmail" : "sama.hazem22@gmail.com",
+    "LoginPage": "/login",
+
+    "ValidEmail2" : "samaa.abdellatif975@gmail.com",
+    "UserName1" : "1256ftyfjv",
+    "UserName2" : "Samaa_Hazem323knjk4kkl",
+    "UserName3" : "Samaa_Hazem222",
+    "Password1" : "asdfghje",
+    "Password2" : "12",
+    "Password3" : "asdfghj",
+    "UserNameErrMsg" : "Username must be between 3 and 20 characters"
+
+}
+  

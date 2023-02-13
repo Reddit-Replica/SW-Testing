@@ -1,0 +1,14 @@
+{
+    "ExistingCommNam" :"footbally",
+    "CommName1": "samasemo",
+    "CommName2": "ab",
+    "CommName3": "hibjhii 8908",
+    "CommName4": "hibjhii##",
+    "CommName5": "hibjhii ##",
+    "CommName6": "8908party",
+    "CommName7": "hihii8908",
+    "CommCategory" : "TV",
+    "NoCommNameErrMsg": "A community name is required",
+    "ErrFormText": "Community names must be between 3–21 characters, and can only contain letters, numbers, or underscores."
+    
+}
