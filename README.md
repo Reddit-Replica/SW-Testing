@@ -1,2 +1,2 @@
-# SW-Testing
-repositry hold all testing file for Reddit-El8alaba Project
+# Deployment-Testing
+This branch for deployment only.
