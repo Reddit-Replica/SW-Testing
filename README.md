@@ -1,2 +1,8 @@
 # SW-Testing
-repositry hold all testing file for Reddit-El8alaba Project
+This Branch contains all files about testing the mobile application.
+
+##Contributors
+
+- Youssef Al Waer ( DevOps )
+- Karim Mahmoud
+- Samaa Hazem
