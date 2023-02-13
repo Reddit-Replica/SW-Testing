@@ -1,2 +1,8 @@
 # SW-Testing
-repositry hold all testing file for Reddit-El8alaba Project
+This branch contains all files related to E2E testing of the website
+
+## Contributors
+
+- Youssef El Waer (DevOps)
+- Karim Mahmoud
+- Samaa Hazem
