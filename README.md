@@ -1,4 +1,4 @@
-# SW-Testing
+# E2E-Testing
 This branch contains all files related to E2E testing of the website
 
 ## Contributors
